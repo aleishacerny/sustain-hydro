@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <PageHeader />
+    <router-view />
     <main>
       <!-- Your main content goes here -->
     </main>

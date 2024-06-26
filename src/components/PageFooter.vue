@@ -2,34 +2,19 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-left">
-        <img class="logo" src="" alt="sustain hydro Logo" />
+        <img class="logo" src="@/assets/White.png" alt="sustain hydro Logo" />
         <p class="slogan">Paving the Way to Zero CO<sub>2</sub> Cement.</p>
         <p class="privacy"><a href="#">Privacy Policy</a></p>
         <p>&copy; 2024 sustain hydro Corporation. All Rights Reserved.</p>
       </div>
-      <div class="footer-links">
-        <div class="link-section">
-          <ul>
-            <li><a href="#">Paving the Way</a></li>
-            <li><a href="#">Why the Plus</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">How We Do It</a></li>
-            <li><a href="#">Partners</a></li>
-          </ul>
-        </div>
-      </div>
       <div class="footer-right">
         <address>
-          100 Great Oaks Blvd,<br />
-          Suite 120<br />
-          San Jose, CA 95119
+          55 St George Street,<br />
+          Suite 620<br />
+          Toronto ON, M5S 1A4
         </address>
-        <p>669.267.6400</p>
-        <p><a href="mailto:info@sustain hydroglobal.com">info@sustain hydroglobal.com</a></p>
-        <div class="social-links">
-          <p>Stay Connected</p>
-          <a href="#"><img src="" alt="LinkedIn" /></a>
-        </div>
+        <p>Phone number: 778-918-1654</p>
+        <p><a href="mailto:contact@serenitypower.ca">contact@serenitypower.ca</a></p>
       </div>
     </div>
   </footer>
@@ -43,23 +28,23 @@ export default {
 
 <style scoped>
 .footer {
-  background-color: #002346;
+  background-color: #0D62AD;
   color: white;
   padding: 40px 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 .container {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Center items vertically */
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
 .footer-left,
-.footer-right,
-.footer-links {
+.footer-right {
   display: flex;
   flex-direction: column;
 }
@@ -69,7 +54,7 @@ export default {
 }
 
 .logo {
-  width: 150px;
+  width: 100px;
   margin-bottom: 20px;
 }
 
@@ -87,27 +72,11 @@ export default {
   text-decoration: none;
 }
 
-.footer-links {
-  display: flex;
-  gap: 40px;
-}
-
-.link-section ul {
-  list-style: none;
-  padding: 0;
-}
-
-.link-section li {
-  margin-bottom: 10px;
-}
-
-.link-section a {
-  color: white;
-  text-decoration: none;
-}
-
-.link-section a:hover {
-  text-decoration: underline;
+.footer-right {
+  justify-content: center; /* Center items vertically */
+  align-items: center; /* Center items horizontally */
+  text-align: center; /* Center text */
+  flex-grow: 1; /* Allow to grow to fill available space */
 }
 
 .footer-right address {
@@ -118,19 +87,5 @@ export default {
 
 .footer-right p {
   margin: 5px 0;
-}
-
-.social-links {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-.social-links p {
-  margin: 0;
-}
-
-.social-links a img {
-  width: 24px;
 }
 </style>

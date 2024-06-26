@@ -2,15 +2,14 @@
   <header class="header">
     <div class="container">
       <div class="logo">
-        <img src="@/assets/logo.png" alt="Sustain Hydro Logo" />
+        <img src="@/assets/Blue.png" alt="Sustain Hydro Logo" />
       </div>
       <nav class="navigation">
         <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Products</a></li>
-          <li><a href="#">Sustainability</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/technology">Technology</router-link></li>
+          <li><router-link to="/about-us">About Us</router-link></li>
+          <li><router-link to="/contact-us">Contact Us</router-link></li>
         </ul>
       </nav>
     </div>
@@ -38,7 +37,7 @@ export default {
   padding: 0 30px;
 }
 .logo img {
-  height: 40px;
+  height: 80px;
 }
 .navigation ul {
   display: flex;
