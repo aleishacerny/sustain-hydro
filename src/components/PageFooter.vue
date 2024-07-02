@@ -2,19 +2,22 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-left">
-        <img class="logo" src="@/assets/White.png" alt="sustain hydro Logo" />
-        <p class="slogan">Paving the Way to Zero CO<sub>2</sub> Cement.</p>
-        <p class="privacy"><a href="#">Privacy Policy</a></p>
-        <p>&copy; 2024 sustain hydro Corporation. All Rights Reserved.</p>
-      </div>
-      <div class="footer-right">
         <address>
           55 St George Street,<br />
           Suite 620<br />
           Toronto ON, M5S 1A4
         </address>
         <p>Phone number: 778-918-1654</p>
-        <p><a href="mailto:contact@serenitypower.ca">contact@serenitypower.ca</a></p>
+        <p>Email: contact@serenitypower.ca
+          <a class="email-icon" href="mailto:contact@serenitypower.ca">
+            <img src="@/assets/email-icon.png" alt="Email Icon" />
+          </a>
+        </p>
+        <p class="privacy"><a href="#">Privacy Policy</a></p>
+        <p>&copy; 2024 sustain hydro Corporation. All Rights Reserved.</p>
+      </div>
+      <div class="footer-right">
+        <img class="logo" src="@/assets/White.png" alt="sustain hydro Logo" />
       </div>
     </div>
   </footer>
@@ -54,8 +57,9 @@ export default {
 }
 
 .logo {
-  width: 100px;
-  margin-bottom: 20px;
+  width: 200px;
+  margin-bottom: 100px;
+  margin-right: 50px;
 }
 
 .slogan {
@@ -72,20 +76,28 @@ export default {
   text-decoration: none;
 }
 
-.footer-right {
+.footer-left {
   justify-content: center; /* Center items vertically */
   align-items: center; /* Center items horizontally */
   text-align: center; /* Center text */
   flex-grow: 1; /* Allow to grow to fill available space */
 }
 
-.footer-right address {
+.footer-left address {
   font-style: normal;
   line-height: 1.5;
   margin-bottom: 20px;
 }
 
-.footer-right p {
+.footer-left p {
   margin: 5px 0;
 }
+
+.email-icon img {
+  width: 30px; /* Set the size of the email icon */
+  height: 30px;
+  margin-left: 3px; /* Add some space between the text and the icon */
+  vertical-align: middle; /* Align icon vertically with the text */
+}
+
 </style>
