@@ -46,7 +46,14 @@ export default {
   background: #fff;
   border-bottom: 1px solid #ddd;
   padding: 20px 0;
+  position: fixed; /* 固定位置 */
+  top: 0;
+  left: 0;
+  width: 100%; /* 全宽 */
+  z-index: 1000; /* 确保它位于其他元素之上 */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 可选：添加阴影 */
 }
+
 .container {
   display: flex;
   justify-content: space-between;
@@ -55,22 +62,27 @@ export default {
   margin: 0 auto;
   padding: 0 30px;
 }
+
 .logo img {
-  height: 80px;
+  height: 60px;
 }
+
 .navigation ul {
   display: flex;
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
 .navigation li {
   margin-right: 20px;
 }
+
 .navigation a {
   text-decoration: none;
   color: #333;
 }
+
 .navigation a:hover {
   color: #000;
 }
@@ -86,6 +98,7 @@ export default {
   justify-content: space-between;
   height: 24px;
 }
+
 .menu-button span {
   display: block;
   width: 30px;
@@ -110,22 +123,28 @@ export default {
     padding: 10px 20px;
     z-index: 1000;
   }
+
   .navigation ul.open {
     display: flex;
     animation: slideDown 0.3s ease-in-out;
   }
+
   .navigation li {
     margin: 10px 0;
   }
+
   .menu-button {
     display: flex;
   }
+
   .menu-button.open span:nth-child(1) {
     transform: translateY(10px) rotate(45deg);
   }
+
   .menu-button.open span:nth-child(2) {
     opacity: 0;
   }
+
   .menu-button.open span:nth-child(3) {
     transform: translateY(-10px) rotate(-45deg);
   }
