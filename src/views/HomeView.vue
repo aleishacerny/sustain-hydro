@@ -35,7 +35,7 @@ html, body {
 
 .fullscreen-video {
   position: absolute;
-  top: 50%;
+  top: 66%;
   left: 50%;
   width: 100%;
   height: 100%;
