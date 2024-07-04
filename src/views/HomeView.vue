@@ -1,49 +1,107 @@
 <template>
-  <div>
+  <div class="homepage">
+    <div class="background-container">
+      <img src="@/assets/background.jpg" alt="Background" class="background-image">
+      <div class="content-overlay">
+        <h1>We make</h1>
+        <p>Technology for a greener future</p>
+        <button @click="learnMore" class="cta-button">Learn How</button>
+      </div>
+    </div>
     <div class="video-container">
-      <video autoplay muted loop playsinline class="fullscreen-video">
+      <video class="fullscreen-video" autoplay muted loop>
         <source src="@/assets/test.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
     <main class="main-content">
-      <!-- 你的主要内容 -->
+      <!-- Your main content goes here -->
     </main>
   </div>
 </template>
-
-<script>
-export default {
-  name: 'HomeView',
-};
-</script>
-
 <style scoped>
 html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  overflow-x: hidden; /* 防止水平滚动 */
+  overflow-x: hidden;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.background-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+}
+
+h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 4rem;
+}
+
+p {
+  font-size: 1.5rem;
+}
+
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cta-button:hover {
+  background-color: #0056b3;
 }
 
 .video-container {
-  position: relative;
-  width: 100vw; /* 全视口宽度 */
-  height: 100vh; /* 全视口高度 */
-  overflow: hidden; /* 确保视频不会溢出 */
+  width: 100vw;
+  height: auto;
 }
 
 .fullscreen-video {
-  position: absolute;
-  top: 66%;
-  left: 50%;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* 确保视频覆盖整个容器 */
-  transform: translate(-50%, -50%);
+  object-fit: cover;
 }
 
 .main-content {
-  padding-top: 200px; /* 与 header 高度相同 */
+  padding: 20px;
+  width: 100%;
 }
 </style>

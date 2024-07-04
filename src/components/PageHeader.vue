@@ -1,5 +1,5 @@
 <template>
-  <header class="header">
+  <header :class="{'scrolled': isScrolled}" class="header">
     <div class="container">
       <div class="logo">
         <img src="@/assets/Blue.png" alt="Sustain Hydro Logo" />
@@ -20,13 +20,13 @@
     </div>
   </header>
 </template>
-
 <script>
 export default {
   name: 'PageHeader',
   data() {
     return {
       isMenuOpen: false,
+      isScrolled: false,
     };
   },
   methods: {
@@ -35,23 +35,34 @@ export default {
     },
     closeMenu() {
       this.isMenuOpen = false;
+    },
+    handleScroll() {
+      this.isScrolled = window.scrollY > 50; // Adjust the scroll distance as needed
     }
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeDestroy() {
+    window.removeEventListener('scroll', this.handleScroll);
   }
 };
 </script>
-
 <style scoped>
-/* 通用样式 */
 .header {
-  background: #fff;
-  border-bottom: 1px solid #ddd;
+  background: transparent; /* Initially no background */
+  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
   padding: 20px 0;
-  position: fixed; /* 固定位置 */
+  position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* 全宽 */
-  z-index: 1000; /* 确保它位于其他元素之上 */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* 可选：添加阴影 */
+  width: 100%;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0);
+}
+
+.header.scrolled {
+  background: #4FC6E6; /* Blue color when scrolled, slightly transparent */
 }
 
 .container {
@@ -80,14 +91,18 @@ export default {
 
 .navigation a {
   text-decoration: none;
-  color: #333;
+  color: #333; /* Initially dark text */
+  transition: color 0.3s ease;
 }
 
 .navigation a:hover {
-  color: #000;
+  color: #000; /* Darker on hover */
 }
 
-/* 汉堡菜单样式 */
+.header.scrolled .navigation a {
+  color: #fff; /* White text when scrolled */
+}
+
 .menu-button {
   display: none;
   background: none;
@@ -103,18 +118,21 @@ export default {
   display: block;
   width: 30px;
   height: 4px;
-  background: #333;
+  background: #333; /* Dark bars */
   border-radius: 2px;
   transition: all 0.3s;
 }
 
-/* 移动端样式 */
+.header.scrolled .menu-button span {
+  background: #fff; /* White bars when scrolled */
+}
+
 @media (max-width: 768px) {
   .navigation ul {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px; /* 根据你的需求调整 */
+    top: 70px;
     right: 0;
     width: 150px;
     background: #fff;
@@ -150,7 +168,6 @@ export default {
   }
 }
 
-/* 动画效果 */
 @keyframes slideDown {
   0% {
     opacity: 0;
