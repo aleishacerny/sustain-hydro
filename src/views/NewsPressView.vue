@@ -2,6 +2,11 @@
   <div class="homepage">
     <div class="background-container">
       <img src="@/assets/background.jpg" alt="Background" class="background-image">
+      <div class="content-overlay">
+        <h1>We make</h1>
+        <p>Technology for a greener future</p>
+        <button @click="learnMore" class="cta-button">Learn How</button>
+      </div>
     </div>
     <div class="video-container">
       <video class="fullscreen-video" autoplay muted loop>
@@ -14,11 +19,6 @@
     </main>
   </div>
 </template>
-<script>
-export default {
-  name: 'TechnologyView',
-};
-</script>
 <style scoped>
 html, body {
   margin: 0;
