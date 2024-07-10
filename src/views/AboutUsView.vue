@@ -2,62 +2,68 @@
   <div class="team-page">
     <div class="background-container">
       <img src="@/assets/background.jpg" alt="Background" class="background-image">
-      <div class="content-overlay">
-      </div>
     </div>
     <div class="team-container">
       <div class="team-card" v-for="member in teamMembers" :key="member.id">
-        <img :src="member.photo" alt="Photo" class="member-photo">
-        <h3>{{ member.name }}</h3>
-        <p>{{ member.position }}</p>
-        <a :href="member.linkedin" target="_blank" class="linkedin-link">LinkedIn</a>
+        <div class="card-inner">
+          <div class="card-front">
+            <img :src="require(`@/assets/${member.photo}`)" alt="Photo" class="member-photo">
+            <h3>{{ member.name }}</h3>
+            <p>{{ member.position }}</p>
+            <a :href="member.linkedin" target="_blank" class="linkedin-link">LinkedIn</a>
+          </div>
+          <div class="card-back">
+            <h3>{{ member.name }}</h3>
+            <p>{{ member.bio }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </template>
-
-
 <script>
 export default {
-  name: 'AboutUsView',
+  name: 'TechnologyView',
   data() {
     return {
       teamMembers: [
         {
           id: 1,
-          name: 'John Doe',
-          position: 'CEO',
-          photo: '@/assets/john_doe.jpg',
-          linkedin: 'https://www.linkedin.com/in/johndoe'
+          name: 'Aleisha R. Cerny',
+          position: 'Chief Executive Officer',
+          photo: 'aleisha.jpeg',
+          linkedin: 'https://www.linkedin.com/in/aleisha-reese-cerny/',
+          bio: 'Aleisha has over 20 years of experience in the tech industry...'
         },
         {
           id: 2,
-          name: 'Jane Smith',
-          position: 'CTO',
-          photo: '@/assets/jane_smith.jpg',
-          linkedin: 'https://www.linkedin.com/in/janesmith'
+          name: 'Yvonne Liu',
+          position: 'Chief Operating Officer',
+          photo: 'background.jpg',
+          linkedin: 'https://www.linkedin.com/in/janesmith',
+          bio: 'Yvonne is a skilled operations manager with a background in...'
         },
         {
           id: 3,
-          name: 'Michael Johnson',
-          position: 'CFO',
-          photo: '@/assets/michael_johnson.jpg',
-          linkedin: 'https://www.linkedin.com/in/michaeljohnson'
+          name: 'Olivera Kesler',
+          position: 'Chief Technology Officer',
+          photo: 'background.jpg',
+          linkedin: 'https://www.linkedin.com/in/michaeljohnson',
+          bio: 'Olivera leads the technology team with a focus on innovation...'
         },
         {
           id: 4,
-          name: 'Emily Davis',
-          position: 'COO',
-          photo: '@/assets/emily_davis.jpg',
-          linkedin: 'https://www.linkedin.com/in/emilydavis'
+          name: 'Yifei Yan',
+          position: 'Head of Engineering',
+          photo: 'background.jpg',
+          linkedin: 'https://www.linkedin.com/in/emilydavis',
+          bio: 'Yifei has a strong background in engineering and project management...'
         }
       ]
     };
   }
 };
 </script>
-
-
 <style scoped>
 html, body {
   margin: 0;
@@ -66,85 +72,73 @@ html, body {
   overflow-x: hidden;
 }
 
-.background-container {
-  position: relative;
+.team-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
-  height: 50vh; /* Adjust the height as needed */
+}
+
+.background-container {
+  width: 100vw;
+  height: 50vh;
   overflow: hidden;
-  margin-top: 80px; /* Adjust according to your header height */
 }
 
 .background-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.content-overlay {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-}
-
-h1, p {
-  margin: 0;
-  padding: 0;
-}
-
-h1 {
-  font-size: 4rem;
-}
-
-p {
-  font-size: 1.5rem;
-}
-
-.cta-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: white;
-  background-color: #007BFF;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.cta-button:hover {
-  background-color: #0056b3;
-}
-
-.team-page {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .team-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 20px;
+  gap: 50px;
+  padding: 50px;
+  width: 100%;
 }
 
 .team-card {
-  background: white;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 250px;
+  perspective: 1000px;
+  width: 400px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 400px;
   text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.team-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card-front {
+  background: white;
+}
+
+.card-back {
+  background: #f8f8f8;
+  transform: rotateY(180deg);
 }
 
 .member-photo {

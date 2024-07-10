@@ -1,17 +1,14 @@
 <template>
-  <div class="homepage">
+  <div class="technologyPage">
     <div class="background-container">
       <img src="@/assets/background.jpg" alt="Background" class="background-image">
     </div>
     <div class="video-container">
       <video class="fullscreen-video" autoplay muted loop>
-        <source src="@/assets/test.mp4" type="video/mp4">
+        <source src="@/assets/technologyVideo.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
-    <main class="main-content">
-      <!-- Your main content goes here -->
-    </main>
   </div>
 </template>
 <script>
@@ -27,7 +24,7 @@ html, body {
   overflow-x: hidden;
 }
 
-.homepage {
+.technologyPage {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -39,7 +36,7 @@ html, body {
 .background-container {
   position: relative;
   width: 100vw;
-  height: 100vh;
+  height: 50vh;
   overflow: hidden;
 }
 
