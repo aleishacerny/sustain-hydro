@@ -13,7 +13,7 @@
         <ul :class="{'open': isMenuOpen}">
           <li><router-link to="/" @click="closeMenu">Home</router-link></li>
           <li><router-link to="/technology" @click="closeMenu">Technology</router-link></li>
-          <li><router-link to="/news&press" @click="closeMenu">News&Press</router-link></li>
+          <li><router-link to="/news" @click="closeMenu">News</router-link></li>
           <li><router-link to="/about-us" @click="closeMenu">About Us</router-link></li>
           <li><router-link to="/contact-us" @click="closeMenu">Contact Us</router-link></li>
         </ul>

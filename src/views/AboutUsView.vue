@@ -2,12 +2,15 @@
   <div class="team-page">
     <div class="background-container">
       <img src="@/assets/background.jpg" alt="Background" class="background-image">
+      <div class="background-text">
+        <p>We are committed to excellence and innovation.</p>
+      </div>
     </div>
     <div class="team-container">
       <div class="team-card" v-for="member in teamMembers" :key="member.id">
-        <div class="card-inner">
+        <div class="card-inner" :class="{ 'is-flipped': member.isFlipped }">
           <div class="card-front">
-            <img :src="require(`@/assets/${member.photo}`)" alt="Photo" class="member-photo">
+            <img :src="require(`@/assets/${member.photo}`)" alt="Photo" class="member-photo" @mouseover="flipCard(member)" @mouseleave="unflipCard(member)">
             <h3>{{ member.name }}</h3>
             <p>{{ member.position }}</p>
             <a :href="member.linkedin" target="_blank" class="linkedin-link">LinkedIn</a>
@@ -21,6 +24,7 @@
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: 'TechnologyView',
@@ -33,7 +37,8 @@ export default {
           position: 'Chief Executive Officer',
           photo: 'aleisha.jpeg',
           linkedin: 'https://www.linkedin.com/in/aleisha-reese-cerny/',
-          bio: 'Aleisha has over 20 years of experience in the tech industry...'
+          bio: 'Aleisha has over 20 years of experience in the tech industry...',
+          isFlipped: false
         },
         {
           id: 2,
@@ -41,7 +46,8 @@ export default {
           position: 'Chief Operating Officer',
           photo: 'background.jpg',
           linkedin: 'https://www.linkedin.com/in/janesmith',
-          bio: 'Yvonne is a skilled operations manager with a background in...'
+          bio: 'Yvonne is a skilled operations manager with a background in...',
+          isFlipped: false
         },
         {
           id: 3,
@@ -49,7 +55,8 @@ export default {
           position: 'Chief Technology Officer',
           photo: 'background.jpg',
           linkedin: 'https://www.linkedin.com/in/michaeljohnson',
-          bio: 'Olivera leads the technology team with a focus on innovation...'
+          bio: 'Olivera leads the technology team with a focus on innovation...',
+          isFlipped: false
         },
         {
           id: 4,
@@ -57,13 +64,23 @@ export default {
           position: 'Head of Engineering',
           photo: 'background.jpg',
           linkedin: 'https://www.linkedin.com/in/emilydavis',
-          bio: 'Yifei has a strong background in engineering and project management...'
+          bio: 'Yifei has a strong background in engineering and project management...',
+          isFlipped: false
         }
       ]
     };
+  },
+  methods: {
+    flipCard(member) {
+      member.isFlipped = true;
+    },
+    unflipCard(member) {
+      member.isFlipped = false;
+    }
   }
 };
 </script>
+
 <style scoped>
 html, body {
   margin: 0;
@@ -91,6 +108,18 @@ html, body {
   object-fit: cover;
 }
 
+.background-text {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0); /* 半透明的黑色背景 */
+  padding: 20px;
+  border-radius: 10px;
+}
+
 .team-container {
   display: flex;
   flex-wrap: wrap;
@@ -102,7 +131,7 @@ html, body {
 
 .team-card {
   perspective: 1000px;
-  width: 400px;
+  width: 500px;
 }
 
 .card-inner {
@@ -114,7 +143,7 @@ html, body {
   transform-style: preserve-3d;
 }
 
-.team-card:hover .card-inner {
+.card-inner.is-flipped {
   transform: rotateY(180deg);
 }
 
