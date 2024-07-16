@@ -2,20 +2,52 @@
   <div class="technologyPage">
     <div class="background-container">
       <img src="@/assets/background.jpg" alt="Background" class="background-image">
+      <div class="background-text">
+        <h1>Technology</h1>
+        <p>Learn about Serenity Power’s innovative Solid Oxide Fuel Cell technology.</p>
+      </div>
     </div>
-    <div class="video-container">
+    <!-- <div class="video-container">
       <video class="fullscreen-video" autoplay muted loop>
         <source src="@/assets/technologyVideo.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
+    </div> -->
+    <div class="content-container">
+      <div class="video-container">
+        <video class="technology-video" autoplay muted loop>
+          <source src="@/assets/tech01.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="description-container">
+        <h2>Two technological advancements engineered for transportation</h2>
+        <p>Our patented SOFC technology is fuel flexible and eliminates the need for fuel processing equipment and a continuous pure water supply that is akin to traditional SOFC technology. This means our stacks are more compact and lighter enabling its use onboard a truck. 
+
+Our cell configuration and materials also enable rapid start-up times and operation meaning that the truck stack or engine can be turned on and off very quickly.</p>
+      </div>
+    </div>
+    <div class="content-container">
+      <div class="description-container">
+        <h2>SOFCs Reimagined Onboard a Truck</h2>
+        <p>The fuel cell system encompasses the stack/engine, the fuel tanks and an electric motor. As our fuel cells are fuel flexible, natural gas, green methane or hydrogen can be used to refill the tanks and fuel the stack. The stack feeds oxygen (from air) and fuel to generate electricity to the electric motor which propels the vehicle forward. </p>
+      </div>
+      <div class="video-container">
+        <video class="technology-video" autoplay muted loop>
+          <source src="@/assets/tech02.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
     </div>
   </div>
 </template>
+
 <script>
 export default {
   name: 'TechnologyView',
 };
 </script>
+
 <style scoped>
 html, body {
   margin: 0;
@@ -49,13 +81,16 @@ html, body {
   left: 0;
 }
 
-.content-overlay {
+.background-text {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
+  background-color: rgba(0, 0, 0, 0); /* 半透明的黑色背景 */
+  padding: 20px;
+  border-radius: 10px;
 }
 
 h1, p {
@@ -64,38 +99,51 @@ h1, p {
 }
 
 h1 {
-  font-size: 4rem;
+  font-size: 3rem; /* Adjust font size as needed */
+}
+
+
+h2 {
+  font-size: 2rem; /* Adjust font size as needed */
+  margin-bottom: 20px;
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 1rem; /* Adjust font size as needed */
+  line-height: 1.5;
+  margin-bottom: 20px;
 }
 
-.cta-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: white;
-  background-color: #007BFF;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.cta-button:hover {
-  background-color: #0056b3;
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: auto;
+  margin: 30px 0;
 }
 
 .video-container {
-  width: 100vw;
-  height: auto;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.fullscreen-video {
+.technology-video {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
+  height: auto;
+  max-width: 500px; /* Adjust max width as needed */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
+
+.description-container {
+  flex: 1;
+  padding-left: 40px; /* Add space between video and text */
+  padding-right: 40px;
+}
+
 
 .main-content {
   padding: 20px;
