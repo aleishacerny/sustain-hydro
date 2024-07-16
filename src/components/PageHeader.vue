@@ -92,7 +92,9 @@ export default {
 
 .navigation a {
   text-decoration: none;
-  color: #333; /* Initially dark text */
+  color: #eaeef1; /* Initially dark text */
+  font-family: Arial, Helvetica, sans-serif;
+  font-size:medium;
   transition: color 0.3s ease;
 }
 
