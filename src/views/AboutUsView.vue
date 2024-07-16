@@ -3,7 +3,9 @@
     <div class="background-container">
       <img src="@/assets/background.jpg" alt="Background" class="background-image">
       <div class="background-text">
-        <p>We are committed to excellence and innovation.</p>
+        <h1>Leadership</h1>
+        <p>Get to know the people that make the energy transition happen! We are a diverse, international, and multidisciplinary team with experience ranging from communication to mechanical engineering.
+        </p>
       </div>
     </div>
     <div class="team-container">
@@ -110,8 +112,8 @@ html, body {
 
 .background-text {
   position: absolute;
-  top: 20%;
-  left: 20%;
+  top: 30%;
+  left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
@@ -182,8 +184,13 @@ h3 {
   margin: 10px 0 5px 0;
 }
 
-p {
-  margin: 0 0 15px 0;
+h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 3rem; /* Adjust font size as needed */
 }
 
 .linkedin-link {

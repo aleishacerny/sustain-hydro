@@ -10,7 +10,7 @@
     </div>
     <div class="video-container">
       <video class="fullscreen-video" autoplay muted loop>
-        <source src="@/assets/test.mp4" type="video/mp4">
+        <source src="@/assets/tech01.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
