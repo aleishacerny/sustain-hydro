@@ -4,23 +4,34 @@
       <div class="logo">
         <img src="@/assets/Blue.png" alt="Sustain Hydro Logo" />
       </div>
-      <nav class="navigation">
-        <button class="menu-button" @click="toggleMenu">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-        <ul :class="{'open': isMenuOpen}">
-          <li><router-link to="/" @click="closeMenu">Home</router-link></li>
-          <li><router-link to="/technology" @click="closeMenu">Technology</router-link></li>
-          <li><router-link to="/news" @click="closeMenu">News</router-link></li>
-          <li><router-link to="/about-us" @click="closeMenu">About Us</router-link></li>
-          <li><router-link to="/contact-us" @click="closeMenu">Contact Us</router-link></li>
-        </ul>
-      </nav>
+      <div class="nav-search-container">
+        <nav class="navigation">
+          <button class="menu-button" @click="toggleMenu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+          <ul :class="{'open': isMenuOpen}">
+            <li><router-link to="/" @click="closeMenu">Home</router-link></li>
+            <li><router-link to="/technology" @click="closeMenu">Technology</router-link></li>
+            <li><router-link to="/news" @click="closeMenu">News</router-link></li>
+            <li><router-link to="/about-us" @click="closeMenu">About Us</router-link></li>
+            <li><router-link to="/contact-us" @click="closeMenu">Contact Us</router-link></li>
+          </ul>
+        </nav>
+        <div class="search-container">
+          <button class="search-button" @click="toggleSearchBar">🔍</button>
+          <div v-if="isSearchBarVisible" class="search-bar">
+            <input type="text" v-model="searchQuery" @keyup.enter="search" placeholder="Search..." />
+            <button @click="search">Search</button>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 </template>
+
+
 <script>
 export default {
   name: 'PageHeader',
@@ -28,6 +39,8 @@ export default {
     return {
       isMenuOpen: false,
       isScrolled: false,
+      isSearchBarVisible: false,
+      searchQuery: ''
     };
   },
   methods: {
@@ -39,6 +52,15 @@ export default {
     },
     handleScroll() {
       this.isScrolled = window.scrollY > 50; // Adjust the scroll distance as needed
+    },
+    toggleSearchBar() {
+      this.isSearchBarVisible = !this.isSearchBarVisible;
+    },
+    search() {
+      if (this.searchQuery.trim()) {
+        this.$router.push({ path: '/search', query: { q: this.searchQuery } });
+        this.isSearchBarVisible = false; // Hide the search bar after searching
+      }
     }
   },
   mounted() {
@@ -49,6 +71,8 @@ export default {
   }
 };
 </script>
+
+
 <style scoped>
 .header {
   background: transparent; /* Initially no background */
@@ -79,6 +103,11 @@ export default {
   height: 60px;
 }
 
+.nav-search-container {
+  display: flex;
+  align-items: center;
+}
+
 .navigation ul {
   display: flex;
   list-style: none;
@@ -94,7 +123,7 @@ export default {
   text-decoration: none;
   color: #eaeef1; /* Initially dark text */
   font-family: Arial, Helvetica, sans-serif;
-  font-size:medium;
+  font-size: medium;
   transition: color 0.3s ease;
 }
 
@@ -128,6 +157,51 @@ export default {
 
 .header.scrolled .menu-button span {
   background: #fff; /* White bars when scrolled */
+}
+
+.search-container {
+  position: relative;
+}
+
+.search-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+.search-bar {
+  position: absolute;
+  top: 40px; /* Adjust based on your header height */
+  right: 0;
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+}
+
+.search-bar input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.header.scrolled .search-bar {
+  border-color: #fff;
+}
+
+.header.scrolled .search-bar button {
+  color: #fff;
 }
 
 @media (max-width: 768px) {
