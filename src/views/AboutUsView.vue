@@ -108,7 +108,7 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
+}ç
 
 .background-text {
   position: absolute;
@@ -123,17 +123,17 @@ html, body {
 }
 
 .team-container {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   justify-content: center;
-  gap: 50px;
+  gap: 100px;
   padding: 50px;
   width: 100%;
 }
 
 .team-card {
   perspective: 1000px;
-  width: 500px;
+  width: 400px;
 }
 
 .card-inner {

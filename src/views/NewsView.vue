@@ -1,107 +1,128 @@
 <template>
-  <div class="homepage">
-    <div class="background-container">
-      <img src="@/assets/background.jpg" alt="Background" class="background-image">
-      <div class="content-overlay">
-        <h1>We make</h1>
-        <p>Technology for a greener future</p>
-        <button @click="learnMore" class="cta-button">Learn How</button>
+  <div class="page">
+    <div class="hero-section">
+      <img src="@/assets/background.jpg" alt="Background" class="hero-image"/>
+      <div class="hero-text">
+        <p>Learn about the latest Hystar press releases, HyStories (our blog), and white papers</p>
       </div>
     </div>
-    <div class="video-container">
-      <video class="fullscreen-video" autoplay muted loop>
-        <source src="@/assets/test.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
+    <div class="cards-section">
+      <div class="card" v-for="(card, index) in cards" :key="index" @click="goToPage(card.link)">
+        <img :src="card.image" :alt="card.title" class="card-image"/>
+        <div class="card-content">
+          <h2>{{ card.title }}</h2>
+          <p>{{ card.date }}</p>
+        </div>
+      </div>
     </div>
-    <main class="main-content">
-      <!-- Your main content goes here -->
-    </main>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'NewsView',
+  data() {
+    return {
+      cards: [
+        {
+          title: 'Saving lives, one stem cell at a time',
+          date: 'July 12, 2024',
+          image: require('@/assets/background.jpg'), // Replace with actual path
+          link: '/news/saving-lives'
+        },
+        {
+          title: 'HyPilot on the move!',
+          date: 'April 22, 2024',
+          image: require('@/assets/background.jpg'), // Replace with actual path
+          link: '/news/hypilot'
+        },
+        {
+          title: 'A year in review - 2023',
+          date: 'December 24, 2023',
+          image: require('@/assets/background.jpg'), // Replace with actual path
+          link: '/news/year-in-review'
+        }
+      ]
+    };
+  },
+  methods: {
+    goToPage(link) {
+      this.$router.push(link);
+    }
+  }
+};
+</script>
+
 <style scoped>
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
+.page {
+  text-align: center;
 }
 
-.homepage {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
-.background-container {
+.hero-section {
   position: relative;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
 }
 
-.background-image {
+.hero-image {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
 }
 
-.content-overlay {
+.hero-text {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 24px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  padding: 0 20px;
   text-align: center;
-  color: white;
 }
 
-h1, p {
-  margin: 0;
-  padding: 0;
+.cards-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 20px;
 }
 
-h1 {
-  font-size: 4rem;
-}
-
-p {
-  font-size: 1.5rem;
-}
-
-.cta-button {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1rem;
-  color: white;
-  background-color: #007BFF;
-  border: none;
-  border-radius: 5px;
+.card {
+  width: 300px;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   cursor: pointer;
+  transition: transform 0.3s, box-shadow 0.3s;
+  margin: 10px;
 }
 
-.cta-button:hover {
-  background-color: #0056b3;
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.video-container {
-  width: 100vw;
-  height: auto;
-}
-
-.fullscreen-video {
+.card-image {
   width: 100%;
-  height: 100%;
+  height: 200px;
   object-fit: cover;
 }
 
-.main-content {
-  padding: 20px;
-  width: 100%;
+.card-content {
+  padding: 15px;
 }
+
+.card-content h2 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.card-content p {
+  color: #777;
+}
+
 </style>
