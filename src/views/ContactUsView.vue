@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
   <div class="contact-page">
     <div class="contact-header">
       <h1>Interested in learning more about our game-changing PEM electrolysers? We'd love to hear from you!</h1>
@@ -96,11 +97,16 @@
         <button type="submit">Submit</button>
       </form>
     </div>
+=======
+  <div>
+    <h1>contact us Page</h1>
+>>>>>>> b2e2b14f55194cf47dc949aaf459389d4da3f963
   </div>
 </template>
 
 <script>
 export default {
+<<<<<<< HEAD
   data() {
     return {
       contactForm: {
@@ -133,10 +139,14 @@ export default {
       console.log(this.globalForm);
     },
   },
+=======
+  name: 'ContactUsView',
+>>>>>>> b2e2b14f55194cf47dc949aaf459389d4da3f963
 };
 </script>
 
 <style scoped>
+<<<<<<< HEAD
 .contact-page {
   padding: 20px;
   color: #333;
@@ -205,3 +215,7 @@ button:hover {
   background-color: #45a049;
 }
 </style>
+=======
+/* Add styles if needed */
+</style>
+>>>>>>> b2e2b14f55194cf47dc949aaf459389d4da3f963
