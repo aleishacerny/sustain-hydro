@@ -3,44 +3,6 @@
     <div class="contact-header">
       <h1>Interested in learning more about our game-changing PEM electrolysers? We'd love to hear from you!</h1>
     </div>
-    <div class="contact-forms">
-      <!-- Contact Us Form -->
-      <form class="contact-form" @submit.prevent="submitForm">
-        <h2>Contact Us</h2>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Enter Your Full Name</label>
-            <input type="text" v-model="contactForm.fullName" required />
-          </div>
-          <div class="form-group">
-            <label>Enter Your Email</label>
-            <input type="email" v-model="contactForm.email" required />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>Enter Your Phone Number</label>
-            <input type="text" v-model="contactForm.phone" required />
-          </div>
-          <div class="form-group">
-            <label>Enter Your Company Name</label>
-            <input type="text" v-model="contactForm.company" />
-          </div>
-        </div>
-        <div class="form-row">
-          <div class="form-group">
-            <label>How did you hear about us?</label>
-            <input type="text" v-model="contactForm.hearAbout" />
-          </div>
-          <div class="form-group">
-            <label>Message</label>
-            <textarea v-model="contactForm.message"></textarea>
-          </div>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-      
-      <!-- Global Reach Form -->
       <form class="global-reach-form" @submit.prevent="submitGlobalForm">
         <h2>Global Reach</h2>
         <div class="form-row">
@@ -96,7 +58,6 @@
         <button type="submit">Submit</button>
       </form>
     </div>
-  </div>
 </template>
 
 <script>
@@ -170,7 +131,7 @@ export default {
 
 .form-row {
   display: flex;
-  gap: 20px;
+  gap: 40px;
 }
 
 .form-group {

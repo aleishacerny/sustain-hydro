@@ -15,7 +15,13 @@
             <li><router-link to="/" @click="closeMenu">Home</router-link></li>
             <li><router-link to="/technology" @click="closeMenu">Technology</router-link></li>
             <li><router-link to="/news" @click="closeMenu">News</router-link></li>
-            <li><router-link to="/about-us" @click="closeMenu">About Us</router-link></li>
+            <li class="dropdown">
+              <router-link to="/about-us" @click="closeMenu">About Us</router-link>
+              <ul class="dropdown-menu">
+                <li><router-link to="/about-us/company" @click="closeMenu">Company</router-link></li>
+                <li><router-link to="/about-us/leadership" @click="closeMenu">Leadership</router-link></li>
+              </ul>
+            </li>
             <li><router-link to="/contact-us" @click="closeMenu">Contact Us</router-link></li>
           </ul>
         </nav>
@@ -30,7 +36,6 @@
     </div>
   </header>
 </template>
-
 
 <script>
 export default {
@@ -71,7 +76,6 @@ export default {
   }
 };
 </script>
-
 
 <style scoped>
 .header {
@@ -117,6 +121,7 @@ export default {
 
 .navigation li {
   margin-right: 20px;
+  position: relative;
 }
 
 .navigation a {
@@ -133,6 +138,44 @@ export default {
 
 .header.scrolled .navigation a {
   color: #fff; /* White text when scrolled */
+}
+
+.dropdown .dropdown-menu {
+  display: none;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  background: transparent;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: transparent;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  list-style: none;
+  padding: 10px 0;
+  min-width: 150px;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  margin: 0;
+}
+
+.dropdown-menu a {
+  color: #333;
+  padding: 10px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+  background: transparent;
+  color: white;
 }
 
 .menu-button {
