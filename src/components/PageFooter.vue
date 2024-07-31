@@ -1,103 +1,96 @@
 <template>
   <footer class="footer">
-    <div class="container">
-      <div class="footer-left">
-        <address>
-          55 St George Street,<br />
-          Suite 620<br />
-          Toronto ON, M5S 1A4
-        </address>
-        <p>Phone number: 778-918-1654</p>
-        <p>Email: contact@serenitypower.ca
-          <a class="email-icon" href="mailto:contact@serenitypower.ca">
-            <img src="@/assets/email-icon.png" alt="Email Icon" />
-          </a>
-        </p>
-        <p class="privacy"><a href="#">Privacy Policy</a></p>
-        <p>&copy; 2024 sustain hydro Corporation. All Rights Reserved.</p>
+    <div class="footer-content">
+      <div class="left-section">
+        <div class="contact-info">
+          <h3>Get in touch</h3>
+          <p>Veritasveien 5<br>1363 Høvik<br>Norway</p>
+          <a href="mailto:info@hystar.com" style="color: aqua;">info@hystar.com</a>
+        </div>
+        <div class="social-media">
+          <h3>Follow us</h3>
+          <div class="social-icons">
+            <a href="#"><img src="@/assets/linkedin.png" alt="linkedin" class="icon"></a>
+          </div>
+        </div>
       </div>
-      <div class="footer-right">
-        <img class="logo" src="@/assets/White.png" alt="sustain hydro Logo" />
+      <div class="right-section">
+        <img src="@/assets/White.png" alt="hystar logo" class="logo">
+        <a href="#" class="privacy-policy">privacy policy</a>
       </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2023 All rights reserved.</p>
     </div>
   </footer>
 </template>
 
 <script>
 export default {
-  name: 'PageFooter',
+  name: 'FooterComponent',
 };
 </script>
 
 <style scoped>
 .footer {
-  background-color: #0D62AD;
+  background-color: #093b4c;
   color: white;
-  padding: 40px 0;
-  font-size: 16px;
+  padding: 20px;
+  text-align: left;
+  width: 100%;
 }
 
-.container {
+.footer-content {
   display: flex;
   justify-content: space-between;
-  align-items: center; /* Center items vertically */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  align-items: left;
+  padding: 20px 20px;
 }
 
-.footer-left,
-.footer-right {
+.left-section {
   display: flex;
   flex-direction: column;
 }
 
-.footer-left {
-  max-width: 300px;
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
 }
 
-.logo {
-  width: 200px;
-  margin-bottom: 100px;
-  margin-right: 50px;
+.contact-info h3,
+.social-media h3 {
+  margin-bottom: 10px;
 }
 
-.slogan {
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-.privacy {
-  margin-top: 10px;
-}
-
-.privacy a {
-  color: #97c0ff;
+.social-icons a {
+  margin: 0 10px;
+  color: white;
   text-decoration: none;
 }
 
-.footer-left {
-  justify-content: center; /* Center items vertically */
-  align-items: center; /* Center items horizontally */
-  text-align: center; /* Center text */
-  flex-grow: 1; /* Allow to grow to fill available space */
-}
-
-.footer-left address {
-  font-style: normal;
-  line-height: 1.5;
+.logo {
+  max-width: 200px;
   margin-bottom: 20px;
 }
 
-.footer-left p {
-  margin: 5px 0;
+.icon {
+  max-width: 20px;
 }
 
-.email-icon img {
-  width: 30px; /* Set the size of the email icon */
-  height: 30px;
-  margin-left: 3px; /* Add some space between the text and the icon */
-  vertical-align: middle; /* Align icon vertically with the text */
+.privacy-policy {
+  color: #7eb5c1;
+  text-decoration: none;
+  margin-left: 50px;
+  margin-top: 100px;
 }
 
+.footer-bottom {
+  margin-left: 20px;
+  text-align: left;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
 </style>

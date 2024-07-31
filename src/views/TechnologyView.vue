@@ -1,9 +1,6 @@
 <template>
   <div class="technologyPage">
-<<<<<<< HEAD
     <!-- Background section -->
-=======
->>>>>>> b2e2b14f55194cf47dc949aaf459389d4da3f963
     <div class="background-container">
       <img src="@/assets/background.jpg" alt="Background" class="background-image">
       <div class="background-text">
@@ -11,17 +8,8 @@
         <p>Learn about Serenity Power’s innovative Solid Oxide Fuel Cell technology.</p>
       </div>
     </div>
-<<<<<<< HEAD
     
     <!-- Content section -->
-=======
-    <!-- <div class="video-container">
-      <video class="fullscreen-video" autoplay muted loop>
-        <source src="@/assets/technologyVideo.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </div> -->
->>>>>>> b2e2b14f55194cf47dc949aaf459389d4da3f963
     <div class="content-container">
       <div class="video-container">
         <video class="technology-video" autoplay muted loop>
@@ -33,16 +21,10 @@
         <h2>Two technological advancements engineered for transportation</h2>
         <p>Our patented SOFC technology is fuel flexible and eliminates the need for fuel processing equipment and a continuous pure water supply that is akin to traditional SOFC technology. This means our stacks are more compact and lighter enabling its use onboard a truck. 
 
-<<<<<<< HEAD
         Our cell configuration and materials also enable rapid start-up times and operation meaning that the truck stack or engine can be turned on and off very quickly.</p>
       </div>
     </div>
     
-=======
-Our cell configuration and materials also enable rapid start-up times and operation meaning that the truck stack or engine can be turned on and off very quickly.</p>
-      </div>
-    </div>
->>>>>>> b2e2b14f55194cf47dc949aaf459389d4da3f963
     <div class="content-container">
       <div class="description-container">
         <h2>SOFCs Reimagined Onboard a Truck</h2>
@@ -55,7 +37,6 @@ Our cell configuration and materials also enable rapid start-up times and operat
         </video>
       </div>
     </div>
-<<<<<<< HEAD
 
     <!-- Grid section -->
     <div class="content-grid">
@@ -69,14 +50,11 @@ Our cell configuration and materials also enable rapid start-up times and operat
         </div>
       </div>
     </div>
-=======
->>>>>>> b2e2b14f55194cf47dc949aaf459389d4da3f963
   </div>
 </template>
 
 <script>
 export default {
-<<<<<<< HEAD
   name: 'technologyView',
   data() {
     return {
@@ -104,9 +82,6 @@ export default {
       ],
     };
   },
-=======
-  name: 'TechnologyView',
->>>>>>> b2e2b14f55194cf47dc949aaf459389d4da3f963
 };
 </script>
 
@@ -211,7 +186,6 @@ p {
   padding: 20px;
   width: 100%;
 }
-<<<<<<< HEAD
 
 .content-grid {
   display: grid;
@@ -264,6 +238,3 @@ p {
   border-radius: 10px;
 }
 </style>
-=======
-</style>
->>>>>>> b2e2b14f55194cf47dc949aaf459389d4da3f963
