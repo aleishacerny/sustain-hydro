@@ -16,7 +16,7 @@
             <li><router-link to="/technology" @click="closeMenu">Technology</router-link></li>
             <li><router-link to="/news" @click="closeMenu">News</router-link></li>
             <li class="dropdown">
-              <router-link to="/about-us" @click="closeMenu">About Us</router-link>
+              <router-link to="/about-us/company" @click="closeMenu">About Us</router-link>
               <ul class="dropdown-menu">
                 <li><router-link to="/about-us/company" @click="closeMenu">Company</router-link></li>
                 <li><router-link to="/about-us/leadership" @click="closeMenu">Leadership</router-link></li>
@@ -26,7 +26,7 @@
           </ul>
         </nav>
         <div class="search-container">
-          <button class="search-button" @click="toggleSearchBar">🔍</button>
+          <button class="search-button" @click="toggleSearchBar"><img src="@/assets/search-icon.png" alt="search" class="search-icon"></button>
           <div v-if="isSearchBarVisible" class="search-bar">
             <input type="text" v-model="searchQuery" @keyup.enter="search" placeholder="Search..." />
             <button @click="search">Search</button>
@@ -213,6 +213,11 @@ export default {
   font-size: 24px;
 }
 
+.search-icon {
+  width: 20px;
+  height: 20px;
+}
+
 .search-bar {
   position: absolute;
   top: 40px; /* Adjust based on your header height */
@@ -238,6 +243,7 @@ export default {
   cursor: pointer;
   font-size: 14px;
 }
+
 
 .header.scrolled .search-bar {
   border-color: #fff;

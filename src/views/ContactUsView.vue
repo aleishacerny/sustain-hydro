@@ -1,9 +1,14 @@
 <template>
   <div class="contact-page">
-    <div class="contact-header">
-      <h1>Interested in learning more about our game-changing PEM electrolysers? We'd love to hear from you!</h1>
+    <div class="background-container">
+      <img src="@/assets/background.jpg" alt="Background" class="background-image">
+      <div class="background-text">
+        <h1>Leadership</h1>
+        <p>Get to know the people that make the energy transition happen! We are a diverse, international, and multidisciplinary team with experience ranging from communication to mechanical engineering.
+        </p>
+      </div>
     </div>
-      <form class="global-reach-form" @submit.prevent="submitGlobalForm">
+      <form class="global-reach-form" @submit.prevent="submitForm">
         <h2>Global Reach</h2>
         <div class="form-row">
           <div class="form-group">
@@ -64,14 +69,6 @@
 export default {
   data() {
     return {
-      contactForm: {
-        fullName: '',
-        email: '',
-        phone: '',
-        company: '',
-        hearAbout: '',
-        message: '',
-      },
       globalForm: {
         firstName: '',
         lastName: '',
@@ -86,21 +83,46 @@ export default {
   },
   methods: {
     submitForm() {
-      // Handle contact form submission
-      console.log(this.contactForm);
-    },
-    submitGlobalForm() {
-      // Handle global reach form submission
-      console.log(this.globalForm);
-    },
-  },
+      const { firstName, lastName, email, phone, company, inquiry, topic, region } = this.globalForm;
+
+      const mailtoLink = `mailto:info@hystar.com?subject=Inquiry from ${firstName} ${lastName}&body=
+        First Name: ${firstName}%0D%0A
+        Last Name: ${lastName}%0D%0A
+        Email: ${email}%0D%0A
+        Phone: ${phone}%0D%0A
+        Company: ${company}%0D%0A
+        Inquiry: ${inquiry}%0D%0A
+        Topic: ${topic}%0D%0A
+        Region: ${region}%0D%0A`;
+
+      window.location.href = mailtoLink;
+    }
+  }
 };
 </script>
 
 <style scoped>
-.contact-page {
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.background-text {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: white;
+  background-color: rgba(0, 0, 0, 0); /* 半透明的黑色背景 */
   padding: 20px;
+  border-radius: 10px;
+}
+.contact-page {
+  padding: 0px;
   color: #333;
+  width: 100%;
 }
 
 .contact-header {

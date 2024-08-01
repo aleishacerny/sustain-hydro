@@ -35,9 +35,11 @@ export default {
 .footer {
   background-color: #093b4c;
   color: white;
-  padding: 20px;
   text-align: left;
   width: 100%;
+  bottom: 0;
+  left: 0;
+  position: bottom;
 }
 
 .footer-content {
