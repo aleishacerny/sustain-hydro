@@ -85,7 +85,7 @@ export default {
     submitForm() {
       const { firstName, lastName, email, phone, company, inquiry, topic, region } = this.globalForm;
 
-      const mailtoLink = `mailto:info@hystar.com?subject=Inquiry from ${firstName} ${lastName}&body=
+      const mailtoLink = `mailto:contact@serenitypower.ca?subject=Inquiry from ${firstName} ${lastName}&body=
         First Name: ${firstName}%0D%0A
         Last Name: ${lastName}%0D%0A
         Email: ${email}%0D%0A
@@ -102,6 +102,12 @@ export default {
 </script>
 
 <style scoped>
+.background-container {
+  width: 100vw;
+  height: 50vh;
+  overflow: hidden;
+}
+
 .background-image {
   width: 100%;
   height: 100%;

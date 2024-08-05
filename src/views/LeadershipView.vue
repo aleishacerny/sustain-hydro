@@ -108,7 +108,7 @@ html, body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-}ç
+}
 
 .background-text {
   position: absolute;
