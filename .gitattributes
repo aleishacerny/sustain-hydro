@@ -1,5 +1,2 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
-<<<<<<< HEAD
 * !text !filter !merge !diff
-=======
->>>>>>> b2e2b14f55194cf47dc949aaf459389d4da3f963
