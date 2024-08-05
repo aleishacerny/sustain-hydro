@@ -7,7 +7,7 @@ import LeadershipView from '@/views/LeadershipView.vue';
 import CompanyView from '@/views/CompanyView.vue';
 
 const routes = [
-  { path: '/', name: 'Home', component: HomeView },
+  { path: '', name: 'Home', component: HomeView },
   { path: '/technology', name: 'Technology', component: TechnologyView },
   { path: '/news', name: 'News', component: NewsView },
   { path: '/about-us/company', name: 'Company', component: CompanyView },
