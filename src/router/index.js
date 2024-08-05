@@ -7,12 +7,12 @@ import LeadershipView from '@/views/LeadershipView.vue';
 import CompanyView from '@/views/CompanyView.vue';
 
 const routes = [
-  { path: '', name: 'Home', component: HomeView },
-  { path: '/technology', name: 'Technology', component: TechnologyView },
-  { path: '/news', name: 'News', component: NewsView },
-  { path: '/about-us/company', name: 'Company', component: CompanyView },
-  { path: '/about-us/leadership', name: 'AboutUs', component: LeadershipView },
-  { path: '/contact-us', name: 'ContactUs', component: ContactUsView },
+  { path: '/sustain-hydro/', name: 'Home', component: HomeView },
+  { path: '/sustain-hydro/technology', name: 'Technology', component: TechnologyView },
+  { path: '/sustain-hydro/news', name: 'News', component: NewsView },
+  { path: '/sustain-hydro/about-us/company', name: 'Company', component: CompanyView },
+  { path: '/sustain-hydro/about-us/leadership', name: 'AboutUs', component: LeadershipView },
+  { path: '/sustain-hydro/contact-us', name: 'ContactUs', component: ContactUsView },
 ];
 
 const router = createRouter({
