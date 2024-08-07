@@ -93,7 +93,7 @@ html, body {
 
 .values-section h2 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom:25px;
 }
 
 .values-cards {
