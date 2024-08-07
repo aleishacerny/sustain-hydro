@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import { createRouter, createWebHashHistory } from 'vue-router';
 import HomeView from '@/views/HomeView.vue'; // Replace with actual paths
 import TechnologyView from '@/views/TechnologyView.vue'; // Replace with actual paths
 import ContactUsView from '@/views/ContactUsView.vue'; // Replace with actual paths
@@ -17,7 +17,7 @@ const routes = [
 ];
 
 const router = createRouter({
-  history: createWebHistory(process.env.BASE_URL),
+  history: createWebHashHistory(),
   routes,
 });
 
