@@ -1,13 +1,14 @@
 <template>
   <div class="team-page">
-    <div class="background-container">
-      <img src="@/assets/background.jpg" alt="Background" class="background-image">
-      <div class="background-text">
-        <h1>Leadership</h1>
-        <p>Get to know the people that make the energy transition happen! We are a diverse, international, and multidisciplinary team with experience ranging from communication to mechanical engineering.
-        </p>
-      </div>
-    </div>
+     <BackgroundComponent
+      backgroundImage="background.jpg"
+      title="Leadership"
+      text="Get to know the people that make the energy transition happen! We are a diverse, international, and multidisciplinary team with experience ranging from communication to mechanical engineering."
+      titleColor="white"
+      textColor="white"
+      titleSize="3rem"
+      textSize="1rem"
+    />
     <div class="team-container">
       <div class="team-card" v-for="member in teamMembers" :key="member.id">
         <div class="card-inner" :class="{ 'is-flipped': member.isFlipped }">
@@ -28,8 +29,13 @@
 </template>
 
 <script>
+import BackgroundComponent from '@/components/BackgroundComponent.vue';
+
 export default {
   name: 'LeadershipView',
+  components: {
+    BackgroundComponent
+  },
   data() {
     return {
       teamMembers: [
@@ -84,42 +90,12 @@ export default {
 </script>
 
 <style scoped>
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-}
 
 .team-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-
-.background-container {
-  width: 100vw;
-  height: 50vh;
-  overflow: hidden;
-}
-
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.background-text {
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  background-color: rgba(0, 0, 0, 0); /* 半透明的黑色背景 */
-  padding: 20px;
-  border-radius: 10px;
 }
 
 .team-container {
@@ -159,7 +135,6 @@ html, body {
   align-items: center;
   justify-content: center;
   padding: 20px;
-  border-radius: 10px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -173,9 +148,9 @@ html, body {
 }
 
 .member-photo {
-  border-radius: 50%;
-  width: 100px;
-  height: 100px;
+  border-radius: 10%;
+  width: 200px;
+  height: 200px;
   object-fit: cover;
   margin-bottom: 15px;
 }

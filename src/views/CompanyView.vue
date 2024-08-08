@@ -1,16 +1,15 @@
 <template>
-  <div class="company-page">
-    <!-- Top Section with Background Image and Text -->
-    <div class="background-container">
-      <img src="@/assets/background.jpg" alt="Background" class="background-image">
-      <div class="background-text">
-        <h1>Leadership</h1>
-        <p>Get to know the people that make the energy transition happen! We are a diverse, international, and multidisciplinary team with experience ranging from communication to mechanical engineering.
-        </p>
-      </div>
-    </div>
+  <div class="company-page">    
+      <BackgroundComponent
+      backgroundImage="background.jpg"
+      title="Leadership"
+      text="Get to know the people that make the energy transition happen! We are a diverse, international, and multidisciplinary team with experience ranging from communication to mechanical engineering."
+      titleColor="white"
+      textColor="white"
+      titleSize="3rem"
+      textSize="1rem"
+    />
 
-    <!-- Our Values Section -->
     <div class="values-section">
       <h2>Our Values</h2>
       <div class="values-cards">
@@ -40,36 +39,22 @@
 </template>
 
 <script>
+import BackgroundComponent from '@/components/BackgroundComponent.vue';
 export default {
-  name: 'CompanyView'
+  name: 'CompanyView',
+  components: {
+    BackgroundComponent
+  }
 };
 </script>
 
 <style scoped>
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-}
 
 .company-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
-}
-
-.background-container {
-  width: 100vw;
-  height: 50vh;
-  overflow: hidden;
-}
-
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
 .overlay {

@@ -1,13 +1,14 @@
 <template>
   <div class="technologyPage">
-    <!-- Background section -->
-    <div class="background-container">
-      <img src="@/assets/background.jpg" alt="Background" class="background-image">
-      <div class="background-text">
-        <h1>Technology</h1>
-        <p>Learn about Serenity Power’s innovative Solid Oxide Fuel Cell technology.</p>
-      </div>
-    </div>
+    <BackgroundComponent
+      backgroundImage="background.jpg"
+      title="We make"
+      text="Technology for a greener future"
+      titleColor="white"
+      textColor="white"
+      titleSize="3rem"
+      textSize="1rem"
+    />
     
     <!-- Content section -->
     <div class="content-container">
@@ -54,8 +55,13 @@
 </template>
 
 <script>
+import BackgroundComponent from '@/components/BackgroundComponent.vue';
+
 export default {
   name: 'technologyView',
+  components: {
+    BackgroundComponent
+  },
   data() {
     return {
       gridItems: [
@@ -86,12 +92,6 @@ export default {
 </script>
 
 <style scoped>
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-}
 
 .technologyPage {
   display: flex;
@@ -102,33 +102,6 @@ html, body {
   height: 100%;
 }
 
-.background-container {
-  position: relative;
-  width: 100vw;
-  height: 50vh;
-  overflow: hidden;
-}
-
-.background-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-.background-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  color: white;
-  background-color: rgba(0, 0, 0, 0); /* 半透明的黑色背景 */
-  padding: 20px;
-  border-radius: 10px;
-}
 
 h1, p {
   margin: 0;

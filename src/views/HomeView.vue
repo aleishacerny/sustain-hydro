@@ -1,13 +1,14 @@
 <template>
   <div class="homepage">
-    <div class="background-container">
-      <img src="@/assets/background.jpg" alt="Background" class="background-image">
-      <div class="content-overlay">
-        <h1>We make</h1>
-        <p>Technology for a greener future</p>
-        <button @click="learnMore" class="cta-button">Learn How</button>
-      </div>
-    </div>
+    <BackgroundComponent
+      backgroundImage="background.jpg"
+      title="We make"
+      text="Technology for a greener future"
+      titleColor="white"
+      textColor="white"
+      titleSize="4rem"
+      textSize="1.5rem"
+    />
     <div class="video-container">
       <video class="fullscreen-video" autoplay muted loop>
         <source src="@/assets/tech01.mp4" type="video/mp4">
@@ -19,13 +20,19 @@
     </main>
   </div>
 </template>
+
+<script>
+import BackgroundComponent from '@/components/BackgroundComponent.vue';
+
+export default {
+  name: 'HomePage',
+  components: {
+    BackgroundComponent
+  }
+};
+</script>
+
 <style scoped>
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow-x: hidden;
-}
 
 .homepage {
   display: flex;

@@ -1,11 +1,14 @@
 <template>
   <div class="page">
-    <div class="hero-section">
-      <img src="@/assets/background.jpg" alt="Background" class="hero-image"/>
-      <div class="hero-text">
-        <p>Learn about the latest Hystar press releases, HyStories (our blog), and white papers</p>
-      </div>
-    </div>
+    <BackgroundComponent
+      backgroundImage="background.jpg"
+      title="We make"
+      text="Technology for a greener future"
+      titleColor="white"
+      textColor="white"
+      titleSize="3rem"
+      textSize="1rem"
+    />
     <div class="cards-section">
       <div class="card" v-for="(card, index) in cards" :key="index" @click="goToPage(card.link)">
         <img :src="card.image" :alt="card.title" class="card-image"/>
@@ -19,8 +22,13 @@
 </template>
 
 <script>
+import BackgroundComponent from '@/components/BackgroundComponent.vue';
+
 export default {
   name: 'NewsView',
+  components: {
+    BackgroundComponent
+  },
   data() {
     return {
       cards: [
@@ -54,34 +62,15 @@ export default {
 </script>
 
 <style scoped>
-.page {
-  text-align: center;
-}
 
-.hero-section {
-  position: relative;
-  width: 100%;
-  height: 300px;
+.team-page {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  overflow: hidden;
-}
-
-.hero-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
 }
 
-.hero-text {
-  position: absolute;
-  color: white;
-  font-size: 24px;
-  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
-  padding: 0 20px;
-  text-align: center;
-}
+
 
 .cards-section {
   display: flex;
