@@ -37,10 +37,11 @@ html, body {
 }
 
 .background-container {
-  position: relative;
   width: 100vw;
   height: 100vh;
   overflow: hidden;
+  top: 0; /* Ensure it sticks to the top */
+  left: 0;
 }
 
 .background-image {

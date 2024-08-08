@@ -91,7 +91,7 @@ export default {
 }
 
 .header.scrolled {
-  background: #4FC6E6; /* Blue color when scrolled, slightly transparent */
+  background: #005d7a; /* Blue color when scrolled, slightly transparent */
 }
 
 .container {
