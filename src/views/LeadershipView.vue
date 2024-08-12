@@ -1,19 +1,15 @@
 <template>
   <div class="team-page">
-     <BackgroundComponent
-      backgroundImage="background.jpg"
-      title="Leadership"
+    <BackgroundComponent backgroundImage="../background.jpg" title="Leadership"
       text="Get to know the people that make the energy transition happen! We are a diverse, international, and multidisciplinary team with experience ranging from communication to mechanical engineering."
-      titleColor="white"
-      textColor="white"
-      titleSize="3rem"
-      textSize="1rem"
-    />
+      titleColor="white" textColor="white" titleSize="3rem" textSize="1rem" />
+      
     <div class="team-container">
       <div class="team-card" v-for="member in teamMembers" :key="member.id">
         <div class="card-inner" :class="{ 'is-flipped': member.isFlipped }">
           <div class="card-front">
-            <img :src="require(`@/assets/${member.photo}`)" alt="Photo" class="member-photo" @mouseover="flipCard(member)" @mouseleave="unflipCard(member)">
+            <img :src="require(`@/assets/${member.photo}`)" alt="Photo" class="member-photo"
+              @mouseover="flipCard(member)" @mouseleave="unflipCard(member)">
             <h3>{{ member.name }}</h3>
             <p>{{ member.position }}</p>
             <a :href="member.linkedin" target="_blank" class="linkedin-link">LinkedIn</a>
@@ -90,7 +86,6 @@ export default {
 </script>
 
 <style scoped>
-
 .team-page {
   display: flex;
   flex-direction: column;
@@ -125,7 +120,8 @@ export default {
   transform: rotateY(180deg);
 }
 
-.card-front, .card-back {
+.card-front,
+.card-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -159,13 +155,15 @@ h3 {
   margin: 10px 0 5px 0;
 }
 
-h1, p {
+h1,
+p {
   margin: 0;
   padding: 0;
 }
 
 h1 {
-  font-size: 3rem; /* Adjust font size as needed */
+  font-size: 3rem;
+  /* Adjust font size as needed */
 }
 
 .linkedin-link {

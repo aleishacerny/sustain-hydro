@@ -1,8 +1,8 @@
 <template>
   <div class="company-page">    
-      <BackgroundComponent
-      backgroundImage="background.jpg"
-      title="Leadership1"
+    <BackgroundComponent
+      backgroundImage="../background.jpg"
+      title="Leadership"
       text="Get to know the people that make the energy transition happen! We are a diverse, international, and multidisciplinary team with experience ranging from communication to mechanical engineering."
       titleColor="white"
       textColor="white"
