@@ -2,7 +2,7 @@
   <header :class="{'scrolled': isScrolled}" class="header">
     <div class="container">
       <div class="logo">
-        <img src="@/assets/Blue.png" alt="Sustain Hydro Logo" />
+        <img src="@/assets/White.png" alt="Sustain Hydro Logo" />
       </div>
       <div class="nav-search-container">
         <nav class="navigation">
