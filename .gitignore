@@ -7,7 +7,7 @@ npm-debug.log
 yarn-error.log
 
 # Vue 项目
-dist/
+# dist/
 *.local
 .env.local
 .env.*.local
