@@ -3,12 +3,14 @@
     <div class="footer-content">
       <div class="left-section">
         <div class="contact-info">
-          <h3>Get in touch</h3>
-          <p>620-55 St. George St.<br>Toronto, ON<br>Norway</p>
+          <h3>Serenity Power</h3>
+          <p>55 St. George St.<br>Unit 620
+            <br>Toronto, ON<br>M5S 0C9</p>
           <a href="mailto:contact@serenitypower.ca" style="color: aqua;">info@hystar.com</a>
         </div>
-        <div class="social-media">
+          <div class="social-media">
           <h3>Follow us</h3>
+          <p>Stay updated with our latest news and developments by following us on LinkedIn.          </p>
           <div class="social-icons">
             <a href="#"><img src="@/assets/linkedin.png" alt="linkedin" class="icon"></a>
           </div>

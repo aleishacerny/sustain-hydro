@@ -1,9 +1,9 @@
 <template>
   <div class="contact-page">
     <BackgroundComponent
-      backgroundImage="background.jpg"
-      title="Leadership"
-      text="Get to know the people that make the energy transition happen! We are a diverse, international, and multidisciplinary team with experience ranging from communication to mechanical engineering."
+      backgroundImage="contact_bg.png"
+      title="CONTACT US"
+      text="Whether you have questions about our technology, want to explore partnership opportunities, or need support, our team is here to help!"
       titleColor="white"
       textColor="white"
       titleSize="3rem"

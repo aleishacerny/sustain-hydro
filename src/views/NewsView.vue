@@ -2,14 +2,13 @@
   <div class="page">
     <BackgroundComponent
       backgroundImage="background.jpg"
-      title="We make"
-      text="Technology for a greener future"
+      title="NEWS IS COMING"
       titleColor="white"
       textColor="white"
       titleSize="3rem"
       textSize="1rem"
     />
-    <div class="cards-section">
+    <!-- <div class="cards-section">
       <div class="card" v-for="(card, index) in cards" :key="index" @click="goToPage(card.link)">
         <img :src="card.image" :alt="card.title" class="card-image"/>
         <div class="card-content">
@@ -17,7 +16,7 @@
           <p>{{ card.date }}</p>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

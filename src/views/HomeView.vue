@@ -1,34 +1,45 @@
 <template>
   <div class="homepage">
-    <BackgroundComponent
-      backgroundImage="background.jpg"
-      title="We make"
-      text="Technology for a greener future"
-      titleColor="white"
-      textColor="white"
-      titleSize="4rem"
-      textSize="1.5rem"
-    />
+    <div class="background-container">
+    <img src="@/assets/homepage_bg.png" alt="Background" class="background-image">
+    <div class="content-overlay" style="white-space: nowrap;">
+      <h1 style="color: white; font-size: 4rem; font-family: 'League Spartan', sans-serif;">DRIVING CLEAN</h1>
+      <h1 style="color: white; font-size: 4rem; font-family: 'League Spartan', sans-serif;">ENERGY SOLUTIONS </h1>
+    
+      <p style="color: white; font-size: 2rem; font-family: 'Canva Sans'"> with Advanced Solid Oxide Fuel Cells</p>
+    </div>
+  </div>
+   
+    <h2>Welcome to Serenity Power</h2>
+    <div class = "content-container">
+    <p>At Serenity Power, we are redefining the future of heavy-duty transportation with our groundbreaking Solid Oxide Fuel Cell (SOFC) technology. Our advanced SOFCs are designed to deliver superior efficiency, durability, and fuel flexibility, making them the ideal power solution for heavy-duty transportation. Join us in our mission to create a cleaner, greener world.
+    </p>
+    </div>
+
+    <h2>Our Mission</h2>
+    <div class = "content-container">
+    <p>To revolutionize heavy-duty transportation with innovative SOFC technology, reducing emissions and promoting sustainable energy solutions globally.</p>
+    </div>
+
     <div class="video-container">
       <video class="fullscreen-video" autoplay muted loop>
-        <source src="@/assets/tech01.mp4" type="video/mp4">
+        <source src="@/assets/Serenity Power Promo Video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
     <main class="main-content">
-      <!-- Your main content goes here -->
+     
+
     </main>
   </div>
 </template>
 
 <script>
-import BackgroundComponent from '@/components/BackgroundComponent.vue';
+
 
 export default {
   name: 'HomePage',
-  components: {
-    BackgroundComponent
-  }
+
 };
 </script>
 
@@ -111,5 +122,13 @@ p {
 .main-content {
   padding: 20px;
   width: 100%;
+}
+.content-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: auto;
+  margin: 30px 0;
 }
 </style>

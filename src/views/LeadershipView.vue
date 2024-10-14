@@ -1,8 +1,9 @@
 <template>
   <div class="team-page">
-    <BackgroundComponent backgroundImage="../background.jpg" title="Leadership"
-      text="Get to know the people that make the energy transition happen! We are a diverse, international, and multidisciplinary team with experience ranging from communication to mechanical engineering."
+    <BackgroundComponent backgroundImage="../leadership_bg.png" title="LEADERSHIP"
+      text="Get to know the people that are making the energy transition happen!"
       titleColor="white" textColor="white" titleSize="3rem" textSize="1rem" />
+      <h2>At Serenity Power, our leadership team brings together a wealth of experience and expertise in fuel cell technology, engineering, and sustainable energy solutions.</h2>
       
     <div class="team-container">
       <div class="team-card" v-for="member in teamMembers" :key="member.id">
@@ -39,36 +40,36 @@ export default {
           id: 1,
           name: 'Aleisha R. Cerny',
           position: 'Chief Executive Officer',
-          photo: 'aleisha.jpeg',
+          photo: 'Aleisha.jpg',
           linkedin: 'https://www.linkedin.com/in/aleisha-reese-cerny/',
-          bio: 'Aleisha has over 20 years of experience in the tech industry...',
+          bio: 'A recent graduate with a Master’s degree in Materials Engineering from the University of Toronto, Aleisha has long been passionate about tangible solutions combating climate change. As a visionary leader with a strong background in engineering, clean energy technologies, and business, she is excited to lead Serenity Power in revolutionizing the heavy-duty transportation industry and driving the adoption of sustainable energy solutions.',
           isFlipped: false
         },
         {
           id: 2,
           name: 'Yvonne Liu',
           position: 'Chief Operating Officer',
-          photo: 'background.jpg',
-          linkedin: 'https://www.linkedin.com/in/janesmith',
-          bio: 'Yvonne is a skilled operations manager with a background in...',
+          photo: 'Yvonne Liu.jpg',
+          linkedin: 'https://www.linkedin.com/in/yvonne-liu-aa28b2158/',
+          bio: 'Yvonne earned a Master’s degree in Mechanical Engineering from the University of Toronto, gaining a strong understanding of sustainable energy through hands-on fuel cell research. She is eager to combine her technical expertise with strategic business management to drive Serenity Power’s mission of clean energy transition and foster a culture of innovation and excellence. ',
           isFlipped: false
         },
         {
           id: 3,
-          name: 'Olivera Kesler',
+          name: 'Dr. Olivera Kesler',
           position: 'Chief Technology Officer',
-          photo: 'background.jpg',
-          linkedin: 'https://www.linkedin.com/in/michaeljohnson',
-          bio: 'Olivera leads the technology team with a focus on innovation...',
+          photo: 'Olivera Kesler.jpg',
+          linkedin: 'https://www.linkedin.com/in/olivera-kesler-566797281/',
+          bio: 'Dr. Olivera Kesler is the CTO of Serenity Power, bringing over 25 years of expertise in Solid Oxide Fuel Cell technology. As a Professor at the University of Toronto and an MIT alumna, she leads our R&D efforts, ensuring our SOFCs remain at the cutting edge of innovation.',
           isFlipped: false
         },
         {
           id: 4,
           name: 'Yifei Yan',
-          position: 'Head of Engineering',
-          photo: 'background.jpg',
-          linkedin: 'https://www.linkedin.com/in/emilydavis',
-          bio: 'Yifei has a strong background in engineering and project management...',
+          position: 'Director of Engineering',
+          photo: 'Yifei Yan.jpg',
+          linkedin: 'https://www.linkedin.com/in/yifei-yan-57b137134/',
+          bio: 'Yifei is a last year PhD student working at the University of Toronto under supervision of Dr. Kesler. The project focus on making high performance metal substrate for SOFC, which has been the performance bottleneck for SOFCs from the lab.',
           isFlipped: false
         }
       ]

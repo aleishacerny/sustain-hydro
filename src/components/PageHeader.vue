@@ -26,7 +26,9 @@
           </ul>
         </nav>
         <div class="search-container">
-          <button class="search-button" @click="toggleSearchBar"><img src="@/assets/search-icon.png" alt="search" class="search-icon"></button>
+          <button class="search-button" @click="toggleSearchBar">
+            <img src="@/assets/search-icon.png" alt="search" class="search-icon">
+          </button>
           <div v-if="isSearchBarVisible" class="search-bar">
             <input type="text" v-model="searchQuery" @keyup.enter="search" placeholder="Search..." />
             <button @click="search">Search</button>
@@ -56,7 +58,7 @@ export default {
       this.isMenuOpen = false;
     },
     handleScroll() {
-      this.isScrolled = window.scrollY > 50; // Adjust the scroll distance as needed
+      this.isScrolled = window.scrollY > 50;
     },
     toggleSearchBar() {
       this.isSearchBarVisible = !this.isSearchBarVisible;
@@ -64,7 +66,7 @@ export default {
     search() {
       if (this.searchQuery.trim()) {
         this.$router.push({ path: '/search', query: { q: this.searchQuery } });
-        this.isSearchBarVisible = false; // Hide the search bar after searching
+        this.isSearchBarVisible = false;
       }
     }
   },
@@ -79,8 +81,9 @@ export default {
 
 <style scoped>
 .header {
-  background: transparent; /* Initially no background */
-  transition: background-color 0.3s ease, border-color 0.3s ease; /* Smooth transition */
+  font-family: 'Open Sans', sans-serif;
+  background: transparent;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
   padding: 20px 0;
   position: fixed;
   top: 0;
@@ -91,7 +94,7 @@ export default {
 }
 
 .header.scrolled {
-  background: #005d7a; /* Blue color when scrolled, slightly transparent */
+  background: #005d7a;
 }
 
 .container {
@@ -126,18 +129,18 @@ export default {
 
 .navigation a {
   text-decoration: none;
-  color: #eaeef1; /* Initially dark text */
+  color: #eaeef1;
   font-family: Arial, Helvetica, sans-serif;
   font-size: medium;
   transition: color 0.3s ease;
 }
 
 .navigation a:hover {
-  color: #000; /* Darker on hover */
+  color: #000;
 }
 
 .header.scrolled .navigation a {
-  color: #fff; /* White text when scrolled */
+  color: #fff;
 }
 
 .dropdown .dropdown-menu {
@@ -193,13 +196,13 @@ export default {
   display: block;
   width: 30px;
   height: 4px;
-  background: #333; /* Dark bars */
+  background: #333;
   border-radius: 2px;
   transition: all 0.3s;
 }
 
 .header.scrolled .menu-button span {
-  background: #fff; /* White bars when scrolled */
+  background: #fff;
 }
 
 .search-container {
@@ -220,7 +223,7 @@ export default {
 
 .search-bar {
   position: absolute;
-  top: 40px; /* Adjust based on your header height */
+  top: 40px;
   right: 0;
   display: flex;
   align-items: center;
@@ -243,7 +246,6 @@ export default {
   cursor: pointer;
   font-size: 14px;
 }
-
 
 .header.scrolled .search-bar {
   border-color: #fff;

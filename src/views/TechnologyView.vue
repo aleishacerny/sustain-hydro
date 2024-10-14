@@ -1,9 +1,9 @@
 <template>
   <div class="technologyPage">
     <BackgroundComponent
-      backgroundImage="background.jpg"
-      title="We make"
-      text="Technology for a greener future"
+      backgroundImage="tech_bg.jpg"
+      title="TECHNOLOGY"
+      text="Learn about Serenity Power’s innovative Solid Oxide Fuel Cell technology. "
       titleColor="white"
       textColor="white"
       titleSize="3rem"
@@ -18,6 +18,7 @@
           Your browser does not support the video tag.
         </video>
       </div>
+      
       <div class="description-container">
         <h2>Two technological advancements engineered for transportation</h2>
         <p>Our patented SOFC technology is fuel flexible and eliminates the need for fuel processing equipment and a continuous pure water supply that is akin to traditional SOFC technology. This means our stacks are more compact and lighter enabling its use onboard a truck. 
@@ -39,7 +40,23 @@
       </div>
     </div>
 
+    <div class="content-container">
+      <div class="description-container">
+        <h2>Driving the Future of Transportation</h2>
+        <p>
+The fuel cell system encompasses the stack/engine, the fuel tanks and an electric motor. As our fuel cells are fuel flexible, natural gas, green methane or hydrogen can be used to refill the tanks and fuel the stack. The stack feeds oxygen (from air) and fuel which react and generate electricity. The electricity flows to the electric motor which moves the vehicle forward. 
+</p>
+      </div>
+      <div class="video-container">
+          <img src="@/assets/truck.png" alt="truck" class="technology-video">
+   
+      </div>
+    </div>
+
+
     <!-- Grid section -->
+     <h2>How Are We Different?</h2>
+     <p>Our advanced SOFCs represent a significant leap forward compared to conventional technologies.</p>
     <div class="content-grid">
       <div class="grid-item" v-for="(item, index) in gridItems" :key="index">
         <div class="item-text">
@@ -51,6 +68,103 @@
         </div>
       </div>
     </div>
+
+    <div class="content-container">
+  <div class="description-container">
+    <div class="text-section">
+      <div class="text-block">
+        <img src="@/assets/1.png" alt="truck" class="icon-img">
+        <h3>Quiet Performance </h3>
+        <p>Experience a peaceful ride with our noise-free operation, eliminating cabin noise for a more comfortable driving experience.
+        </p>
+      </div>
+      <div class="text-block">
+        <img src="@/assets/2.png" alt="truck" class="icon-img">
+        <h3>Sustainable Power</h3>
+        <p>Achieve zero emissions when paired with the right fuel source, contributing to a cleaner, greener future.
+        </p>
+      </div>
+      <div class="text-block">
+        <img src="@/assets/3.png" alt="truck" class="icon-img">
+        <h3>Customizable Solutions
+        </h3>
+        <p>Adaptable power systems designed to meet your specific energy needs, ensuring optimal performance for your application.
+        </p>
+      </div>
+    </div>
+  </div>
+      <div class="video-container">
+        <img src="@/assets/tech-display.jpg" alt="truck" class="process-img">
+      </div>
+    </div>
+
+    <!-- <img src="@/assets/future applications img.jpg" alt="truck" class="text-split-img">
+    -->
+   
+    <div class="background-container">
+    <img src="@/assets/future applications img.jpg" alt="Background" class="background-image">
+    <div class="content-overlay">
+      <h1>Future Applications</h1>
+    </div>
+  </div>
+
+  <div class="text-section">
+    <h2>Future Applications</h2>
+    <p>Solid Oxide Fuel Cells (SOFCs) are a versatile and powerful technology capable of transforming numerous high-emission industries. At Serenity Power, while we are initially focusing on revolutionizing the heavy-duty transportation sector, our vision extends far beyond. We are committed to leveraging our advanced technology to drive sustainable change across various sectors:
+    </p>
+    </div>
+
+  <div class="background-container">
+    <img src="@/assets/energy storage img.png" alt="truck" class="background-image">
+    <div class="content-overlay">
+      <!-- <h1>Future Applications</h1> -->
+    </div>
+  </div>
+
+  <div class="text-section">
+    <h2>Energy Storage</h2>
+    <p>Our advanced SOFCs can operate as Solid Oxide Electrolysis Cells (SOECs), seamlessly integrating into energy storage systems. This enables efficient storage of excess renewable energy for use during low generation periods, enhancing grid stability and reliability.
+    </p>
+    </div>
+
+    
+    <div class="background-container">
+    <img src="@/assets/power generation img.png" alt="truck" class="background-image">
+    <div class="content-overlay">
+      <!-- <h1>Future Applications</h1> -->
+    </div>
+  </div>
+  
+  <div class="text-section">
+    <h2>Power Generation</h2>
+    <p>Our SOFC technology provides a sustainable, high-efficiency alternative to fossil fuels. Ideal for residential, commercial, and industrial power generation, it reduces emissions and supports clean energy solutions for both off-grid and urban locations.
+    </p>
+    </div>
+    
+  
+    <div class="background-container">
+    <img src="@/assets/syngas img.png" alt="truck" class="background-image">
+    <div class="content-overlay">
+    </div>
+  </div>
+
+    <div class="text-section">
+    <h2>Syngas & Hydrogen Production</h2>
+    <p>Our SOECs efficiently produce hydrogen and syngas from various fuel sources, including natural gas, biogas, and green methane. This technology supports the hydrogen economy and fosters innovations in clean fuel production and energy storage.
+    </p>
+    </div>
+
+   
+
+    
+    <div class="background-container">
+    <img src="@/assets/technology end.jpg" alt="truck" class="background-image">
+    <div class="content-overlay">
+      <h2 style="color: white;">Be part of the clean transportation transition.</h2></div>
+    </div>
+
+
+
   </div>
 </template>
 
@@ -66,24 +180,24 @@ export default {
     return {
       gridItems: [
         {
-          title: 'Proven Flight Heritage',
-          text: 'With patented technology tested and deployed on 23 satellites in orbit, our products have proven flight heritage for our customers.',
-          image: require('@/assets/background.jpg'),
+          title: 'Higher Efficiency:',
+          text: 'Our SOFCs convert more fuel into electricity with less waste heat, delivering lower operational costs and a reduced environmental footprint compared to low-temperature PEMFCs.',
+          image: require('@/assets/higher efficiency icon.png'),
         },
         {
-          title: 'Proven Optical Technology',
-          text: 'Our SDA-compatible optical constellation provides smarter solutions to global gaps in space communications.',
-          image: require('@/assets/background.jpg'),
+          title: 'Fuel Flexibility',
+          text: 'Compatible with hydrogen, natural gas, and green methane, our technology offers a versatile solution for transportation without relying solely on the hydrogen economy.',
+          image: require('@/assets/fuel flexibility icon.png'),
         },
         {
-          title: 'Priority Spectrum Holding',
-          text: 'Our services offer a complete solution, granting operators access to Kepler’s regulatory filings, and allowing our customers to focus on the mission.',
-          image: require('@/assets/background.jpg'),
+          title: 'Rapid Start-Up',
+          text: 'Our SOFCs feature faster start-up and shut-down times, ideal for applications requiring frequent cycling, such as heavy-duty transportation.',
+          image: require('@/assets/rapid startup icon.png'),
         },
         {
-          title: 'Full Lifecycle Satellite Operations',
-          text: 'We are proud to be among the few commercial space companies that operate with vertically integrated production capabilities.',
-          image: require('@/assets/background.jpg'),
+          title: 'Compact Design',
+          text: 'By eliminating fuel processing equipment, our SOFCs are more compact and lightweight, allowing seamless integration into vehicles without sacrificing power or efficiency. ',
+          image: require('@/assets/compact design icon.png'),
         },
       ],
     };
@@ -154,6 +268,36 @@ p {
   padding-right: 40px;
 }
 
+.process-img {
+  width: 500px;
+  height: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.text-img {
+  width: 100%;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: contain; /* 图片等比例缩小并显示全图 */
+}
+
+.text-split-img {
+  width: 150vh;
+  height: 70vh;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  object-fit: cover; /* 图片等比例缩小并显示全图 */
+}
+
+.icon-img {
+    width: 60px;  /* 固定宽度 */
+    height: auto;  /* 高度自适应 */
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+}
 
 .main-content {
   padding: 20px;
@@ -209,5 +353,57 @@ p {
   height: 100%;
   object-fit: cover; /* Ensure image covers its container */
   border-radius: 10px;
+}
+
+.background-container {
+  width: 150vw;
+  height: 50vh;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.background-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.content-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.text-section {
+    
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+.text-section h2 {
+    color: #005d7a;
+    font-size: 32px;
+}
+
+.text-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin: 10px 0;
+}
+
+.text-section .highlight {
+    font-weight: bold;
+    color: #075F7A;
 }
 </style>
