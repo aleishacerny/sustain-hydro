@@ -3,7 +3,7 @@
     <BackgroundComponent
       backgroundImage="../company_bg.png"
       title="ABOUT OUR COMPANY"
-      text="We are a clean tech company dedicated to nex-gen SOFC technology."      
+      text="We are a clean tech company dedicated to next-gen SOFC technology."      
       titleColor="white"
       textColor="white"
       titleSize="3rem"
@@ -13,7 +13,7 @@
 
     <div class="text-section">
     <h2>Our Story</h2>
-    <p>ounded in 2023, Serenity Power is at the forefront of clean energy innovation. We specialize in developing advanced Solid Oxide Fuel Cells (SOFCs) aimed to transform the heavy-duty transportation industry by providing innovative, efficient, and environmentally friendly power solutions. Our team of experts is dedicated to creating sustainable energy solutions that meet the growing demand for cleaner, more efficient power. 
+    <p>Founded in 2023, Serenity Power is at the forefront of clean energy innovation. We specialize in developing advanced Solid Oxide Fuel Cells (SOFCs) aimed to transform the heavy-duty transportation industry by providing innovative, efficient, and environmentally friendly power solutions. Our team of experts is dedicated to creating sustainable energy solutions that meet the growing demand for cleaner, more efficient power. 
     </p>
   </div>
     
@@ -51,7 +51,7 @@
           <p>Driven by our mission to create a lasting, positive impact on people and the planet.
           </p>
         </div>
-        <div class="value-card">
+        <!-- <div class="value-card">
           <img src="@/assets/truck.png" alt="Agility Icon" class="value-icon" />
           <h3>Collaboration</h3>
           <p>Building strong partnerships to accelerate clean technology advancements.
@@ -61,7 +61,7 @@
           <img src="@/assets/truck.png" alt="Agility Icon" class="value-icon" />
           <h3>Empowerment</h3>
           <p>Fostering an environment where creativity, inclusivity, and growth thrive.</p>
-        </div>
+        </div> -->
       </div>
     </div>
 

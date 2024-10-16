@@ -76,7 +76,7 @@ The fuel cell system encompasses the stack/engine, the fuel tanks and an electri
       </div>
     </div>
 
-    <h2>Benefits of Serenity Power Technology:</h2>
+    <h2>Benefits of Serenity Power Technology</h2>
     <div class="content-container">
   <div class="description-container">
     <div class="text-section">
@@ -110,24 +110,18 @@ The fuel cell system encompasses the stack/engine, the fuel tanks and an electri
     -->
    
     <div class="background-container">
-    <img src="@/assets/future applications img.jpg" alt="Background" class="background-image">
+    <img src="@/assets/future_applications_img.png" alt="Background" class="background-image">
     <div class="content-overlay">
-      <h1>Future Applications</h1>
+      <h1 style="color:white">Future Applications</h1>
     </div>
   </div>
 
   <div class="text-section">
-    <h2>Future Applications</h2>
     <p>Solid Oxide Fuel Cells (SOFCs) are a versatile and powerful technology capable of transforming numerous high-emission industries. At Serenity Power, while we are initially focusing on revolutionizing the heavy-duty transportation sector, our vision extends far beyond. We are committed to leveraging our advanced technology to drive sustainable change across various sectors:
     </p>
     </div>
 
-  <div class="background-container">
-    <img src="@/assets/energy storage img.png" alt="truck" class="background-image">
-    <div class="content-overlay">
-      <!-- <h1>Future Applications</h1> -->
-    </div>
-  </div>
+  
 
   <div class="text-section">
     <h2>Energy Storage</h2>

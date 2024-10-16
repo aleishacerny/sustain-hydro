@@ -6,7 +6,7 @@
           <h3>Serenity Power</h3>
           <p>55 St. George St.<br>Unit 620
             <br>Toronto, ON<br>M5S 0C9</p>
-          <a href="mailto:contact@serenitypower.ca" style="color: aqua;">info@hystar.com</a>
+          <a href="mailto:contact@serenitypower.ca" style="color: aqua;">contact@serenitypower.ca</a>
         </div>
           <div class="social-media">
           <h3>Follow us</h3>
