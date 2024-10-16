@@ -2,9 +2,11 @@
   <div class="team-page">
     <BackgroundComponent backgroundImage="../leadership_bg.png" title="LEADERSHIP"
       text="Get to know the people that are making the energy transition happen!"
-      titleColor="white" textColor="white" titleSize="3rem" textSize="1rem" />
+      titleColor="white" textColor="white" titleSize="3rem" textSize="1.5rem" />
+      <div class="description-container">
       <h2>At Serenity Power, our leadership team brings together a wealth of experience and expertise in fuel cell technology, engineering, and sustainable energy solutions.</h2>
-      
+      </div>
+
     <div class="team-container">
       <div class="team-card" v-for="member in teamMembers" :key="member.id">
         <div class="card-inner" :class="{ 'is-flipped': member.isFlipped }">
@@ -176,4 +178,19 @@ h1 {
 .linkedin-link:hover {
   text-decoration: underline;
 }
+
+.description-container {
+  flex: 1;
+  padding-left: 30px; /* Add space between video and text */
+  padding-right: 30px;
+
+}
+
+.description-container h2 {
+      color: #005d7a;
+  }
+
+  .description-container p{
+      font-family:'Canva Sans';
+  }
 </style>

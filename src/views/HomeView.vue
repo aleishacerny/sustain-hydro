@@ -6,18 +6,18 @@
       <h1 style="color: white; font-size: 4rem; font-family: 'League Spartan', sans-serif;">DRIVING CLEAN</h1>
       <h1 style="color: white; font-size: 4rem; font-family: 'League Spartan', sans-serif;">ENERGY SOLUTIONS </h1>
     
-      <p style="color: white; font-size: 2rem; font-family: 'Canva Sans'"> with Advanced Solid Oxide Fuel Cells</p>
+      <p style="color: white; font-size: 3rem; font-family: 'Canva Sans'"> with Advanced Solid Oxide Fuel Cells</p>
     </div>
   </div>
    
+   
+    <div class="text-section">
     <h2>Welcome to Serenity Power</h2>
-    <div class = "content-container">
-    <p>At Serenity Power, we are redefining the future of heavy-duty transportation with our groundbreaking Solid Oxide Fuel Cell (SOFC) technology. Our advanced SOFCs are designed to deliver superior efficiency, durability, and fuel flexibility, making them the ideal power solution for heavy-duty transportation. Join us in our mission to create a cleaner, greener world.
-    </p>
+    <p>At Serenity Power, we are redefining the future of heavy-duty transportation with our groundbreaking Solid Oxide Fuel Cell (SOFC) technology. Our advanced SOFCs are designed to deliver superior efficiency, durability, and fuel flexibility, making them the ideal power solution for heavy-duty transportation. Join us in our mission to create a cleaner, greener world.</p>
     </div>
 
+    <div class="text-section">
     <h2>Our Mission</h2>
-    <div class = "content-container">
     <p>To revolutionize heavy-duty transportation with innovative SOFC technology, reducing emissions and promoting sustainable energy solutions globally.</p>
     </div>
 
@@ -73,7 +73,7 @@ export default {
 
 .content-overlay {
   position: absolute;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
@@ -131,4 +131,29 @@ p {
   height: auto;
   margin: 30px 0;
 }
+.text-section {
+          
+          padding: 20px;
+          border-radius: 10px;
+          max-width: 1000px;
+          margin: 0 auto;
+          font-family: Arial, sans-serif;
+          color: #333;
+      }
+    
+      .text-section h2 {
+          color: #075F7A;
+          font-size: 32px;
+      }
+    
+      .text-section p {
+          font-size: 18px;
+          line-height: 1.6;
+          margin: 10px 0;
+      }
+    
+      .text-section .highlight {
+          font-weight: bold;
+          color: #075F7A;
+      }
 </style>

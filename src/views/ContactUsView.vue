@@ -7,7 +7,7 @@
       titleColor="white"
       textColor="white"
       titleSize="3rem"
-      textSize="1rem"
+      textSize="1.5rem"
     />
       <form class="global-reach-form" @submit.prevent="submitForm">
         <h2>Global Reach</h2>

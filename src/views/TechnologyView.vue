@@ -1,3 +1,6 @@
+<head> 
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+</head>
 <template>
   <div class="technologyPage">
     <BackgroundComponent
@@ -7,7 +10,7 @@
       titleColor="white"
       textColor="white"
       titleSize="3rem"
-      textSize="1rem"
+      textSize="1.5rem"
     />
     
     <!-- Content section -->
@@ -55,8 +58,12 @@ The fuel cell system encompasses the stack/engine, the fuel tanks and an electri
 
 
     <!-- Grid section -->
-     <h2>How Are We Different?</h2>
+     <h2 >How Are We Different?</h2>
      <p>Our advanced SOFCs represent a significant leap forward compared to conventional technologies.</p>
+     <img src="@/assets/how_different_img.png" alt="truck" class="description-image">
+
+
+     <h2 >Our Innovations That Set Us Apart:</h2>
     <div class="content-grid">
       <div class="grid-item" v-for="(item, index) in gridItems" :key="index">
         <div class="item-text">
@@ -69,6 +76,7 @@ The fuel cell system encompasses the stack/engine, the fuel tanks and an electri
       </div>
     </div>
 
+    <h2>Benefits of Serenity Power Technology:</h2>
     <div class="content-container">
   <div class="description-container">
     <div class="text-section">
@@ -150,7 +158,7 @@ The fuel cell system encompasses the stack/engine, the fuel tanks and an electri
 
     <div class="text-section">
     <h2>Syngas & Hydrogen Production</h2>
-    <p>Our SOECs efficiently produce hydrogen and syngas from various fuel sources, including natural gas, biogas, and green methane. This technology supports the hydrogen economy and fosters innovations in clean fuel production and energy storage.
+    <p>Our SOECs efficiently produce hydrogen and syngas frcom various fuel sources, including natural gas, biogas, and green methane. This technology supports the hydrogen economy and fosters innovations in clean fuel production and energy storage.
     </p>
     </div>
 
@@ -264,9 +272,18 @@ p {
 
 .description-container {
   flex: 1;
-  padding-left: 40px; /* Add space between video and text */
-  padding-right: 40px;
+  padding-left: 30px; /* Add space between video and text */
+  padding-right: 30px;
+
 }
+
+.description-container h2 {
+      color: #005d7a;
+  }
+
+  .description-container p{
+      font-family:'Canva Sans';
+  }
 
 .process-img {
   width: 500px;
@@ -373,6 +390,13 @@ p {
   left: 0;
 }
 
+.description-image {
+  width: 90%;
+  height: 90%;
+  object-fit: cover;
+
+}
+
 .content-overlay {
   position: absolute;
   top: 50%;
@@ -406,4 +430,13 @@ p {
     font-weight: bold;
     color: #075F7A;
 }
+
+h2,h3{
+  color:#005d7a;
+}
+
+p {
+  font-family: 'Canva Sans', Arial, sans-serif;
+  }
+
 </style>

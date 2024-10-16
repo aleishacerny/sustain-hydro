@@ -3,6 +3,7 @@
     <BackgroundComponent
       backgroundImage="background.jpg"
       title="NEWS IS COMING"
+      text="waiting"
       titleColor="white"
       textColor="white"
       titleSize="3rem"

@@ -7,7 +7,7 @@
       titleColor="white"
       textColor="white"
       titleSize="3rem"
-      textSize="1rem"
+      textSize="1.5rem"
     />
 
 
@@ -78,7 +78,9 @@
 <div class="background-container">
     <img src="@/assets/company_end.png" alt="truck" class="background-image">
     <div class="content-overlay">
-      <h2 style="color: white;">Let’s Build a Better Planet</h2></div>
+      <h2 style="color: white;">LET'S BUILD A BETTER PLANET</h2>
+      <p>Join us in revolutionizing heavy-duty transportation with advanced SOFC technology. Together, we can drive a sustainable future and make a lasting impact on the planet.</p>
+    </div>
     </div>
 
 
@@ -172,29 +174,29 @@ export default {
 
 .text-section {
           
-            padding: 20px;
-            border-radius: 10px;
-            max-width: 800px;
-            margin: 0 auto;
-            font-family: Arial, sans-serif;
-            color: #333;
-        }
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+      margin: 0 auto;
+      font-family: Arial, sans-serif;
+      color: #333;
+  }
 
-        .text-section h2 {
-            color: #005d7a;
-            font-size: 32px;
-        }
+  .text-section h2 {
+      color: #005d7a;
+      font-size: 32px;
+  }
 
-        .text-section p {
-            font-size: 18px;
-            line-height: 1.6;
-            margin: 10px 0;
-        }
+  .text-section p {
+      font-size: 18px;
+      line-height: 1.6;
+      margin: 10px 0;
+  }
 
-        .text-section .highlight {
-            font-weight: bold;
-            color: #075F7A;
-        }
+  .text-section .highlight {
+      font-weight: bold;
+      color: #075F7A;
+  }
 .background-container {
   width: 100vw;
   height: 50vh;
