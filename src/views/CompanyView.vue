@@ -80,6 +80,8 @@
     <div class="content-overlay">
       <h2 style="color: white;">LET'S BUILD A BETTER PLANET</h2>
       <p>Join us in revolutionizing heavy-duty transportation with advanced SOFC technology. Together, we can drive a sustainable future and make a lasting impact on the planet.</p>
+      <button class="cta-button" @click="goToContact">Contact Us</button>
+  
     </div>
     </div>
 
@@ -91,9 +93,14 @@
 import BackgroundComponent from '@/components/BackgroundComponent.vue';
 export default {
   name: 'CompanyView',
+  methods: {
+    goToContact() {
+      this.$router.push({ name: 'ContactUs' }); // Assumes that 'OurCompany' is the route name
+    },
+  },
   components: {
     BackgroundComponent
-  }
+  },
 };
 </script>
 
@@ -221,6 +228,16 @@ export default {
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
+}
+.cta-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #007BFF;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
 }
 @media (max-width: 768px) {
   .values-cards {
