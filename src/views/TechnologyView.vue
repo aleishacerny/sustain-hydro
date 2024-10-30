@@ -1,10 +1,7 @@
-<head> 
-<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
-</head>
 <template>
   <div class="technologyPage">
     <BackgroundComponent
-      backgroundImage="tech_bg.jpg"
+      backgroundImage="tech_bg.png"
       title="TECHNOLOGY"
       text="Learn about Serenity Power’s innovative Solid Oxide Fuel Cell technology. "
       titleColor="white"
@@ -14,6 +11,39 @@
     />
     
     <!-- Content section -->
+   
+
+   
+
+
+    <!-- Grid section -->
+    <div class="content-container">
+      <div class="description-container">
+     <h2 >What Are Solid Oxide Fuel Cells?</h2>
+     <p>SOFCs are high-efficiency electrochemical devices that convert fuel into clean electricity. 
+They operate at high temperatures, using a solid ceramic electrolyte to transport oxygen ions from the air to the fuel, typically hydrogen or natural gas. This reaction produces electricity, water, and heat without combustion, resulting in lower emissions.
+</p>
+     <img src="@/assets/pitch.png" alt="truck" class="description-image">
+      </div>
+      </div>
+
+     <h2 >How Are We Different?</h2>
+     <p>Our advanced SOFCs represent a significant leap forward compared to conventional technologies.</p>
+     <img src="@/assets/how_different_img.png" alt="truck" class="description-image">
+
+     <h2 >Our Innovations That Set Us Apart:</h2>
+    <div class="content-grid">
+      <div class="grid-item" v-for="(item, index) in gridItems" :key="index">
+        <div class="item-text">
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.text }}</p>
+        </div>
+        <div class="item-image">
+          <img :src="item.image" :alt="item.title"/>
+        </div>
+      </div>
+    </div>
+
     <div class="content-container">
       <div class="video-container">
         <video class="technology-video" autoplay muted loop>
@@ -24,16 +54,16 @@
       
       <div class="description-container">
         <h2>Two technological advancements engineered for transportation</h2>
-        <p>Our patented SOFC technology is fuel flexible and eliminates the need for fuel processing equipment and a continuous pure water supply that is akin to traditional SOFC technology. This means our stacks are more compact and lighter enabling its use onboard a truck. 
+        <p>Our patented SOFC technology is fuel flexible and eliminates the need for fuel processing equipment and a continuous pure water supply that are required forthat are required for traditional SOFC technology. This means engines are more compact and lighter, enabling its use onboard a truck. 
 
-        Our cell configuration and materials also enable rapid start-up times and operation meaning that the truck stack or engine can be turned on and off very quickly.</p>
+        Our cell configuration and materials also enable rapid start-up times and operation, meaning that the truck or engine can be turned on and off very quickly.</p>
       </div>
     </div>
     
     <div class="content-container">
       <div class="description-container">
         <h2>SOFCs Reimagined Onboard a Truck</h2>
-        <p>The fuel cell system encompasses the stack/engine, the fuel tanks and an electric motor. As our fuel cells are fuel flexible, natural gas, green methane or hydrogen can be used to refill the tanks and fuel the stack. The stack feeds oxygen (from air) and fuel to generate electricity to the electric motor which propels the vehicle forward. </p>
+        <p>The fuel cell system encompasses the engine, the fuel tanks and an electric motor. As our fuel cells are fuel flexible, natural gas, green methane or hydrogen can be used to refill the tanks and fuel engine. The engine feeds oxygen (from air) and fuel to generate electricity to the electric motor which propels the vehicle forward. </p>
       </div>
       <div class="video-container">
         <video class="technology-video" autoplay muted loop>
@@ -47,32 +77,8 @@
       <div class="description-container">
         <h2>Driving the Future of Transportation</h2>
         <p>
-The fuel cell system encompasses the stack/engine, the fuel tanks and an electric motor. As our fuel cells are fuel flexible, natural gas, green methane or hydrogen can be used to refill the tanks and fuel the stack. The stack feeds oxygen (from air) and fuel which react and generate electricity. The electricity flows to the electric motor which moves the vehicle forward. 
+The fuel cell system encompasses the engine, the fuel tanks and an electric motor. As our fuel cells are fuel flexible, natural gas, green methane or hydrogen can be used to refill the tanks and fuel engine. The engine feeds oxygen (from air) and fuel which react and generate electricity. The electricity flows to the electric motor which moves the vehicle forward. 
 </p>
-      </div>
-      <div class="video-container">
-          <img src="@/assets/truck.png" alt="truck" class="technology-video">
-   
-      </div>
-    </div>
-
-
-    <!-- Grid section -->
-     <h2 >How Are We Different?</h2>
-     <p>Our advanced SOFCs represent a significant leap forward compared to conventional technologies.</p>
-     <img src="@/assets/how_different_img.png" alt="truck" class="description-image">
-
-
-     <h2 >Our Innovations That Set Us Apart:</h2>
-    <div class="content-grid">
-      <div class="grid-item" v-for="(item, index) in gridItems" :key="index">
-        <div class="item-text">
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.text }}</p>
-        </div>
-        <div class="item-image">
-          <img :src="item.image" :alt="item.title"/>
-        </div>
       </div>
     </div>
 
@@ -106,8 +112,7 @@ The fuel cell system encompasses the stack/engine, the fuel tanks and an electri
       </div>
     </div>
 
-    <!-- <img src="@/assets/future applications img.jpg" alt="truck" class="text-split-img">
-    -->
+
    
     <div class="background-container">
     <img src="@/assets/future_applications_img.png" alt="Background" class="background-image">
@@ -162,7 +167,7 @@ The fuel cell system encompasses the stack/engine, the fuel tanks and an electri
     <div class="background-container">
     <img src="@/assets/technology end.jpg" alt="truck" class="background-image">
     <div class="content-overlay">
-      <h2 style="color: white;">Be part of the clean transportation transition.</h2></div>
+      <h2 style="color: white; font-family: 'Canva Sans', sans-serif; font-size: 2rem; text-align: center;">Be part of the clean transportation transition.</h2></div>
     </div>
 
 
@@ -208,6 +213,7 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
 .technologyPage {
   display: flex;
@@ -378,7 +384,6 @@ p {
 .background-image {
   width: 100%;
   height: 100%;
-  object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -393,7 +398,7 @@ p {
 
 .content-overlay {
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   text-align: center;
