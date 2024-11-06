@@ -8,6 +8,7 @@
       textColor="white"
       titleSize="3rem"
       textSize="1.5rem"
+      titleFontFamily="League Spartan"
     />
 
 
@@ -78,7 +79,7 @@
 <div class="background-container">
     <img src="@/assets/company_end.png" alt="truck" class="background-image">
     <div class="content-overlay">
-      <h2 style="color: white;">LET'S BUILD A BETTER PLANET</h2>
+      <h2>LET'S BUILD A BETTER PLANET</h2>
       <p>Join us in revolutionizing heavy-duty transportation with advanced SOFC technology. Together, we can drive a sustainable future and make a lasting impact on the planet.</p>
       <button class="cta-button" @click="goToContact">Contact Us</button>
   
@@ -221,6 +222,21 @@ export default {
   top: 0;
   left: 0;
 }
+
+.content-overlay h2 {
+      font-size: 30px;
+      color: white;
+      line-height: 1.6;
+      margin: 10px 0;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+.content-overlay p {
+      font-size: 20px;
+      line-height: 1.6;
+      margin: 10px 0;
+      font-family: Arial, Helvetica, sans-serif;
+  }
 
 .content-overlay {
   position: absolute;
