@@ -98,16 +98,18 @@ export default {
 
 .team-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  justify-content: center;
-  gap: 100px;
+  grid-template-columns: repeat(2, 1fr); /* 2卡片每行 */
+  gap: 30px; /* 调整卡片间距 */
   padding: 50px;
   width: 100%;
+  max-width: 900px; /* 限制宽度，避免卡片过大 */
+  margin: 0 auto;
 }
 
 .team-card {
   perspective: 1000px;
-  width: 400px;
+  width: 100%; /* 设置卡片宽度为100%以适应网格 */
+  max-width: 400px; /* 设置卡片最大宽度 */
 }
 
 .card-inner {
@@ -183,14 +185,13 @@ h1 {
   flex: 1;
   padding-left: 30px; /* Add space between video and text */
   padding-right: 30px;
-
 }
 
 .description-container h2 {
-      color: #005d7a;
-  }
+  color: #005d7a;
+}
 
-  .description-container p{
-      font-family:'Canva Sans';
-  }
+.description-container p {
+  font-family: 'Canva Sans';
+}
 </style>
