@@ -2,13 +2,14 @@
   <div class="background-container">
     <img :src="backgroundImage" alt="Background" class="background-image">
     <div class="content-overlay">
-      <h1 :style="{ color: titleColor, fontSize: titleSize }">{{ title }}</h1>
-      <p :style="{ color: textColor, fontSize: textSize }">{{ text }}</p>
+      <h1 :style="{ color: titleColor, fontSize: titleSize, fontFamily: titleFontFamily }">{{ title }}</h1>
+      <p :style="{ color: textColor, fontSize: textSize, fontFamily: subtitleFontFamily}">{{ text }}</p>
     </div>
   </div>
 </template>
 
 <script>
+
 export default {
   name: 'BackgroundComponent',
   props: {
@@ -40,11 +41,20 @@ export default {
       type: String,
       default: '1.5rem'
     },
+    titleFontFamily: {
+      type: String,
+      default:  'League Spartan'
+    },
+    subtitleFontFamily: {
+      type: String,
+      default: 'sans-serif'
+    },
   }
 };
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 .background-container {
   width: 100vw;
   height: 50vh;
@@ -68,8 +78,21 @@ export default {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
+  text-align: center; /* Keep this for the title */
+  width: 100%; /* Ensure the paragraph takes full width */
 }
+
+.content-overlay p{
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center; /* Keep this for the title */
+  width: 80%; /* Ensure the paragraph takes full width */
+}
+
+
+
 
 .cta-button {
   margin-top: 20px;

@@ -3,9 +3,9 @@
     <div class="background-container">
       <img src="@/assets/homepage_bg.png" alt="Background" class="background-image">
       <div class="content-overlay" style="white-space: nowrap;">
-        <h1 style="color: white; font-size: 4rem; font-family: 'League Spartan', sans-serif;">DRIVING CLEAN</h1>
-        <h1 style="color: white; font-size: 4rem; font-family: 'League Spartan', sans-serif;">ENERGY SOLUTIONS </h1>
-        <p style="color: white; font-size: 3rem; font-family: 'Canva Sans'"> with Advanced Solid Oxide Fuel Cells</p>
+        <h1 class="title-text">DRIVING CLEAN</h1>
+        <h1 class="title-text">ENERGY SOLUTIONS</h1>
+        <p class="subtitle-text">with Advanced Solid Oxide Fuel Cells</p>
         
         <!-- Learn More Button -->
         <button class="cta-button" @click="goToOurCompany">Learn More</button>
@@ -38,13 +38,16 @@ export default {
   name: 'HomePage',
   methods: {
     goToOurCompany() {
-      this.$router.push({ name: 'Company' }); // Assumes that 'OurCompany' is the route name
+      this.$router.push({ name: 'Company' });
     },
   },
 };
 </script>
 
 <style scoped>
+/* Import League Spartan font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
 .homepage {
   display: flex;
   flex-direction: column;
@@ -80,12 +83,24 @@ export default {
   color: white;
 }
 
+.title-text {
+  color: white;
+  font-size: 4rem; /* Adjust to your needs */
+  font-family: 'League Spartan', sans-serif;
+}
+
+.subtitle-text {
+  color: white;
+  font-size: 2rem;
+  font-family:sans-serif; /* Replace with a similar sans-serif */
+}
+
 .cta-button {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 1rem;
   color: white;
-  background-color: #007BFF;
+  background-color: #075F7A;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -98,12 +113,28 @@ export default {
 .video-container {
   width: 100vw;
   height: auto;
+  overflow: hidden;
 }
 
 .fullscreen-video {
   width: 100%;
-  height: 100%;
+  height: 100vh; /* Full height for desktop */
   object-fit: cover;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .video-container {
+    width: 100%;
+    height: auto;
+  }
+
+  .fullscreen-video {
+    width: 100vw;
+    height: auto;
+    max-height: 50vh; /* Limits video height on mobile */
+    object-fit: contain; /* Prevents cropping */
+  }
 }
 
 .main-content {
