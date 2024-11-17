@@ -1,3 +1,4 @@
+<!-- submit button  color; technology-alignment; logo bigger+link;  email address color; linkedin icon-->
 <template>
   <div class="homepage">
     <div class="background-container">

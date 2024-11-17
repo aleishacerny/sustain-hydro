@@ -15,7 +15,9 @@
               @mouseover="flipCard(member)" @mouseleave="unflipCard(member)">
             <h3>{{ member.name }}</h3>
             <p>{{ member.position }}</p>
-            <a :href="member.linkedin" target="_blank" class="linkedin-link">LinkedIn</a>
+            <a :href="member.linkedin" target="_blank" class="linkedin-link">
+              <img src="@/assets/linkedin_profile.png" alt="linkedin" class="linkedin-link">
+            </a>
           </div>
           <div class="card-back">
             <h3>{{ member.name }}</h3>
@@ -175,6 +177,8 @@ h1 {
   color: #0077b5;
   text-decoration: none;
   font-weight: bold;
+  width: 30px;
+  height: 30px;
 }
 
 .linkedin-link:hover {

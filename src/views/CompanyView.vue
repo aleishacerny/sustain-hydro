@@ -81,12 +81,9 @@
     <div class="content-overlay">
       <h2>LET'S BUILD A BETTER PLANET</h2>
       <p>Join us in revolutionizing heavy-duty transportation with advanced SOFC technology. Together, we can drive a sustainable future and make a lasting impact on the planet.</p>
-      <button class="cta-button" @click="goToContact">Contact Us</button>
-  
+      <button class="cta-button" @click="goToContact" :style="{ background: '#005d7a' }">Contact Us</button>
     </div>
     </div>
-
-
   </div>
 </template>
 
@@ -133,7 +130,9 @@ export default {
   background: #f8f9fa;
 }
 
+
 .values-section h2 {
+  color: #005d7a;
   text-align: center;
   margin-bottom:25px;
 }
@@ -233,6 +232,7 @@ export default {
 
 .content-overlay p {
       font-size: 20px;
+      color: white;
       line-height: 1.6;
       margin: 10px 0;
       font-family: Arial, Helvetica, sans-serif;
@@ -245,12 +245,13 @@ export default {
   transform: translate(-50%, -50%);
   text-align: center;
 }
+
 .cta-button {
   margin-top: 20px;
   padding: 10px 20px;
   font-size: 1rem;
   color: white;
-  background-color: #007BFF;
+  background-color: #075F7A;
   border: none;
   border-radius: 5px;
   cursor: pointer;
