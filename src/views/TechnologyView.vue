@@ -161,10 +161,11 @@ They operate at high temperatures, using a solid ceramic electrolyte to transpor
 
     <div class="background-container">
     <img src="@/assets/technology_end.png" alt="truck" class="background-image">
-    <div class="content-overlay-center" >
+    <div class="content-overlay" >
       <h2 style="color: white; font-family: Arial, sans-serif; font-size: 2rem; text-align: center;">BE PART OF THE </h2>
-      <h2 style="color: white; font-family: Arial, sans-serif; font-size: 2rem; text-align: center;">CLEAN ENERGY TRANSITION</h2></div>
+      <h2 style="color: white; font-family: Arial, sans-serif; font-size: 2rem; text-align: center;">CLEAN ENERGY TRANSITION</h2>
       <button class="cta-button" @click="goToContact">INQUIRE NOW</button>
+      </div>
     </div>
    
   </div>
@@ -178,6 +179,11 @@ export default {
   name: 'technologyView',
   components: {
     BackgroundComponent
+  },
+  methods: {
+    goToContact() {
+      this.$router.push({ name: 'ContactUs' }); // Assumes that 'OurCompany' is the route name
+    },
   },
   data() {
     return {
@@ -402,12 +408,28 @@ p {
   text-align: left;
 }
 
-.content-overlay-center {
+.content-overlay h2 {
+      font-size: 30px;
+      color: white;
+      line-height: 1.6;
+      margin: 10px 0;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+.content-overlay p {
+      font-size: 20px;
+      color: white;
+      line-height: 1.6;
+      margin: 10px 0;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+.content-overlay {
   position: absolute;
-  top: 30%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: left;
+  text-align: center;
 }
 
 .text-section {
@@ -453,7 +475,7 @@ p {
 }
 
 .cta-button {
-  margin-top: 100px;
+  margin-top: 30px;
   padding: 10px 20px;
   font-size: 1rem;
   color: white;
