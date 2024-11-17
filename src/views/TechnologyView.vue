@@ -115,7 +115,7 @@ They operate at high temperatures, using a solid ceramic electrolyte to transpor
    
     <div class="background-container">
     <img src="@/assets/future_applications_img.png" alt="Background" class="background-image">
-    <div class="content-overlay">
+      <div class="text-section-left">
       <h1 style="color: white; font-family: Arial, sans-serif;">Future </h1>
       <h1 style="color: white; font-family: Arial, sans-serif;">Applications</h1>
     </div>
@@ -408,11 +408,28 @@ p {
   text-align: left;
 }
 
+.text-section-left {
+  position: absolute;
+  top: 30%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  text-align: left;
+}
+
 .content-overlay h2 {
       font-size: 30px;
       color: white;
       line-height: 1.6;
       margin: 10px 0;
+      font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .text-section-left  h1 {
+      font-size: 50px;
+      color: white;
+      position: flex;
+      line-height: 1.6;
+      text-align: left;
       font-family: Arial, Helvetica, sans-serif;
   }
 
@@ -510,7 +527,8 @@ h2,h3{
 }
 
 p {
-  font-family: 'Canva Sans', Arial, sans-serif;
+  font-family:'sans-serif';
+  font-size: 1rem;
   }
 
 </style>
