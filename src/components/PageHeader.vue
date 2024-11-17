@@ -107,7 +107,7 @@ export default {
 }
 
 .logo img {
-  height: 60px;
+  height: 80px;
 }
 
 .nav-search-container {
