@@ -3,14 +3,17 @@
     <div class="footer-content">
       <div class="left-section">
         <div class="contact-info">
-          <h3>Serenity Power</h3>
-          <p>55 St. George St.<br>Unit 620
-            <br>Toronto, ON<br>M5S 0C9</p>
-          <a href="mailto:contact@serenitypower.ca" style="color: aqua;">contact@serenitypower.ca</a>
+          <h3 style="font-family: Arial, sans-serif;">Serenity Power</h3>
+          <p style="font-family: Arial, sans-serif;">55 St. George St.
+          <br>Unit 620
+          <br>Toronto, ON
+          <br>M5S 0C9
+          </p>
+          <a href="mailto:contact@serenitypower.ca" style="color: aqua;font-family: Arial, sans-serif;">contact@serenitypower.ca</a>
         </div>
           <div class="social-media">
-          <h3>Follow us</h3>
-          <p>Stay updated with our latest news and developments by following us on LinkedIn.          </p>
+          <h3 style="font-family: Arial, sans-serif;">Follow us</h3>
+          <p style="font-family: Arial, sans-serif;">Stay updated with our latest news and developments by following us on LinkedIn.          </p>
           <div class="social-icons">
             <a href="https://www.linkedin.com/company/serenity-power-ca/"><img src="@/assets/linkedin.png" alt="linkedin" class="icon"></a>
           </div>
@@ -22,7 +25,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <p>&copy; 2023 All rights reserved.</p>
+      <p style="font-family: Arial, sans-serif;">&copy; 2023 All rights reserved.</p>
     </div>
   </footer>
 </template>
@@ -34,7 +37,10 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
 html, body {
+  
   margin: 0;
   padding: 0;
   width: 100%;
@@ -43,6 +49,7 @@ html, body {
 }
 
 .footer {
+  font-family: Arial, sans-serif;
   background-color: #005d7a;
   color: white;
   text-align: left;
@@ -52,6 +59,7 @@ html, body {
 }
 
 .footer-content {
+  font-family: Arial, sans-serif;
   display: flex;
   justify-content: space-between;
   align-items: left;

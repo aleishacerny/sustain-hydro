@@ -13,21 +13,21 @@
 
 
     <div class="text-section">
-    <h2>Our Story</h2>
-    <p>Founded in 2023, Serenity Power is at the forefront of clean energy innovation. We specialize in developing advanced Solid Oxide Fuel Cells (SOFCs) aimed to transform the heavy-duty transportation industry by providing innovative, efficient, and environmentally friendly power solutions. Our team of experts is dedicated to creating sustainable energy solutions that meet the growing demand for cleaner, more efficient power. 
+    <h2 style="font-family: Arial, sans-serif;">Our Story</h2>
+    <p style="font-family: Arial, sans-serif;">Founded in 2023, Serenity Power is at the forefront of clean energy innovation. We specialize in developing advanced Solid Oxide Fuel Cells (SOFCs) aimed to transform the heavy-duty transportation industry by providing innovative, efficient, and environmentally friendly power solutions. Our team of experts is dedicated to creating sustainable energy solutions that meet the growing demand for cleaner, more efficient power. 
     </p>
   </div>
     
 
   <div class="text-section">
-    <h2>Our Vision</h2>
-    <p>To lead the global transition to sustainable energy in the transportation sector, reducing reliance on fossil fuels and minimizing environmental impact.
+    <h2 style="font-family: Arial, sans-serif;">Our Vision</h2>
+    <p style="font-family: Arial, sans-serif;">To lead the global transition to sustainable energy in the transportation sector, reducing reliance on fossil fuels and minimizing environmental impact.
     </p>
   </div>
    
 
     <div class="values-section">
-      <h2>Our Core Values</h2>
+      <h2 style="font-family: Arial, sans-serif;">Our Core Values</h2>
       <div class="values-cards">
         <div class="value-card">
           <img src="@/assets/Innovation.png" alt="Impact Icon" class="value-icon" />
@@ -103,6 +103,7 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
 .company-page {
   display: flex;
@@ -135,6 +136,7 @@ export default {
   color: #005d7a;
   text-align: center;
   margin-bottom:25px;
+  font-family: Arial, sans-serif;
 }
 
 .values-cards {
@@ -163,11 +165,13 @@ export default {
 .value-card h3 {
   margin-bottom: 15px;
   color: #4FC6E6;
+  font-family: Arial, sans-serif;
 }
 
 .value-card p {
   margin-bottom: 10px;
   color: #666;
+  font-family: Arial, sans-serif;
 }
 
 .content-container {
@@ -192,12 +196,14 @@ export default {
   .text-section h2 {
       color: #005d7a;
       font-size: 32px;
+      font-family: Arial, sans-serif;
   }
 
   .text-section p {
       font-size: 18px;
       line-height: 1.6;
       margin: 10px 0;
+      font-family: Arial, sans-serif;
   }
 
   .text-section .highlight {

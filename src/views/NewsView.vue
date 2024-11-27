@@ -34,19 +34,19 @@ export default {
     return {
       cards: [
         {
-          title: 'Saving lives, one stem cell at a time',
+          title: 'Exciting updates are on the way!',
           date: 'July 12, 2024',
           image: require('@/assets/news1.jpg'), // Replace with actual path
           link: '/news/saving-lives'
         },
         {
-          title: 'HyPilot on the move!',
+          title: 'Exciting updates are on the way!',
           date: 'April 22, 2024',
           image: require('@/assets/news2.jpg'), // Replace with actual path
           link: '/news/hypilot'
         },
         {
-          title: 'A year in review - 2023',
+          title: 'Exciting updates are on the way!',
           date: 'December 24, 2023',
           image: require('@/assets/news3.jpg'), // Replace with actual path
           link: '/news/year-in-review'

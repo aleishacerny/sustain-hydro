@@ -91,6 +91,8 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
 .team-page {
   display: flex;
   flex-direction: column;
@@ -106,12 +108,15 @@ export default {
   width: 100%;
   max-width: 900px; /* 限制宽度，避免卡片过大 */
   margin: 0 auto;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .team-card {
   perspective: 1000px;
   width: 100%; /* 设置卡片宽度为100%以适应网格 */
   max-width: 400px; /* 设置卡片最大宽度 */
+  font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 .card-inner {
@@ -121,6 +126,7 @@ export default {
   text-align: center;
   transition: transform 0.6s;
   transform-style: preserve-3d;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .card-inner.is-flipped {
@@ -139,6 +145,7 @@ export default {
   justify-content: center;
   padding: 20px;
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .card-front {
@@ -160,12 +167,14 @@ export default {
 
 h3 {
   margin: 10px 0 5px 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1,
 p {
   margin: 0;
   padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 h1 {
@@ -179,6 +188,8 @@ h1 {
   font-weight: bold;
   width: 30px;
   height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 5px;
 }
 
 .linkedin-link:hover {
@@ -189,10 +200,12 @@ h1 {
   flex: 1;
   padding-left: 30px; /* Add space between video and text */
   padding-right: 30px;
+  font-family: 'Canva Sans';
 }
 
 .description-container h2 {
   color: #005d7a;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .description-container p {

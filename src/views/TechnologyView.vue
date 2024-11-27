@@ -16,20 +16,20 @@
     <!-- Grid section -->
     <div class="content-container">
       <div class="description-container">
-     <h2 >What Are Solid Oxide Fuel Cells?</h2>
-     <p>SOFCs are high-efficiency electrochemical devices that convert fuel into clean electricity. 
+     <h2 style="font-family: Arial, sans-serif;">What Are Solid Oxide Fuel Cells?</h2>
+     <p style="font-family: Arial, sans-serif;">SOFCs are high-efficiency electrochemical devices that convert fuel into clean electricity. 
 They operate at high temperatures, using a solid ceramic electrolyte to transport oxygen ions from the air to the fuel, typically hydrogen or natural gas. This reaction produces electricity, water, and heat without combustion, resulting in lower emissions.
 </p>
-     <img src="@/assets/pitch.png" alt="truck" class="description-image">
+     <img src="@/assets/fuel.png" alt="truck" class="description-image">
       </div>
       </div>
 
-     <h2 >How Are We Different?</h2>
+     <h2 style="font-family: Arial, sans-serif;">How Are We Different?</h2>
      <div class="content-grid">
       <div class="grid-item" v-for="(item, index) in gridItems" :key="index">
         <div class="item-text">
-          <h3>{{ item.title }}</h3>
-          <p>{{ item.text }}</p>
+          <h3 style="font-family: Arial, sans-serif;">{{ item.title }}</h3>
+          <p style="font-family: Arial, sans-serif;">{{ item.text }}</p>
         </div>
         <div class="item-image">
           <img :src="item.image" :alt="item.title"/>
@@ -51,16 +51,16 @@ They operate at high temperatures, using a solid ceramic electrolyte to transpor
       </div>
       
       <div class="description-container">
-        <h2>Engineered for Transportation</h2>
-        <p> Our patented SOFC technology is fuel-flexible and eliminates the need for bulky fuel processing and a pure water supply required by traditional SOFCs. This makes our stacks more compact and lighter, ideal for onboard truck use. Additionally, our cell design and materials enable rapid start-up, allowing for quick engine on/off operation.
+        <h2 style="font-family: Arial, sans-serif;">Engineered for Transportation</h2>
+        <p style="font-family: Arial, sans-serif;"> Our patented SOFC technology is fuel-flexible and eliminates the need for bulky fuel processing and a pure water supply required by traditional SOFCs. This makes our stacks more compact and lighter, ideal for onboard truck use. Additionally, our cell design and materials enable rapid start-up, allowing for quick engine on/off operation.
         </p>
       </div>
     </div>
     
     <div class="content-container">
       <div class="description-container">
-        <h2>SOFC Integration in Heavy Mobility</h2>
-        <p>Heavy-duty transportation, including trucks, buses, and ships, are a major contributor to greenhouse gas emissions. At Serenity Power, we believe that our advanced SOFC technology can revolutionize this sector by providing clean, efficient, and reliable power solutions.        </p>
+        <h2 style="font-family: Arial, sans-serif;">SOFC Integration in Heavy Mobility</h2>
+        <p style="font-family: Arial, sans-serif;">Heavy-duty transportation, including trucks, buses, and ships, are a major contributor to greenhouse gas emissions. At Serenity Power, we believe that our advanced SOFC technology can revolutionize this sector by providing clean, efficient, and reliable power solutions.        </p>
       </div>
       <div class="video-container">
         <video class="technology-video" autoplay muted loop>
@@ -74,31 +74,31 @@ They operate at high temperatures, using a solid ceramic electrolyte to transpor
       <div class="description-container">
         <h2>Driving the Future of Transportation</h2>
         <img src="@/assets/truck.png" alt="truck"  class="description-image">
-        <p>
+        <p style="font-family: Arial, sans-serif;">
           The fuel cell system encompasses the engine, the fuel tanks and an electric motor. As our fuel cells are fuel flexible, natural gas, green methane or hydrogen can be used to refill the tanks and fuel the stack. Oxygen from air and fuel are fed to the fuel cell engine, which uses it to make electricity. The electricity is then used by the electric motor to propel the vehicle forward.</p>
       </div>
     </div>
 
-    <h2>Benefits of Serenity Power Technology</h2>
+    <h2 style="font-family: Arial, sans-serif;">Benefits of Serenity Power Technology</h2>
     <div class="content-container">
     <div class="description-container">
     <div class="text-section">
       <div class="text-block">
         <img src="@/assets/1.png" alt="truck" class="icon-img">
-        <h3>Quiet </h3>
-        <p>Experience a peaceful ride with our noise-free operation, eliminating cabin noise for a more comfortable driving experience.
+        <h3 style="font-family: Arial, sans-serif;">Quiet </h3>
+        <p style="font-family: Arial, sans-serif;">Experience a peaceful ride with our noise-free operation, eliminating cabin noise for a more comfortable driving experience.
         </p>
       </div>
       <div class="text-block">
         <img src="@/assets/2.png" alt="truck" class="icon-img">
-        <h3>Sustainable</h3>
-        <p>Achieve zero emissions when paired with the right fuel source, contributing to a cleaner, greener future.</p>
+        <h3 style="font-family: Arial, sans-serif;">Sustainable</h3>
+        <p style="font-family: Arial, sans-serif;">Achieve zero emissions when paired with the right fuel source, contributing to a cleaner, greener future.</p>
       </div>
       <div class="text-block">
         <img src="@/assets/3.png" alt="truck" class="icon-img">
-        <h3>Customizable
+        <h3 style="font-family: Arial, sans-serif;">Customizable
         </h3>
-        <p>Adaptable power systems designed to meet your specific energy needs, ensuring optimal performance for your application.
+        <p style="font-family: Arial, sans-serif;">Adaptable power systems designed to meet your specific energy needs, ensuring optimal performance for your application.
         </p>
       </div>
     </div>
@@ -116,20 +116,20 @@ They operate at high temperatures, using a solid ceramic electrolyte to transpor
     <div class="background-container">
     <img src="@/assets/future_applications_img.png" alt="Background" class="background-image">
       <div class="text-section-left">
-      <h1 style="color: white; font-family: Arial, sans-serif;">Future </h1>
-      <h1 style="color: white; font-family: Arial, sans-serif;">Applications</h1>
+      <h1 style="color: white; font-family: Arial, sans-serif;">FUTURE </h1>
+      <h1 style="color: white; font-family: Arial, sans-serif;">APPLICATIONS</h1>
     </div>
   </div>
 
   <div class="text-section">
-    <p>Solid Oxide Fuel Cells are a versatile and powerful technology capable of transforming numerous high-emission industries. At Serenity Power, while we are initially focusing on revolutionizing the heavy-duty transportation sector, our vision extends far beyond. We are committed to leveraging our advanced technology to drive sustainable change across various sectors:
+    <p style="font-family: Arial, sans-serif;">Solid Oxide Fuel Cells are a versatile and powerful technology capable of transforming numerous high-emission industries. At Serenity Power, while we are initially focusing on revolutionizing the heavy-duty transportation sector, our vision extends far beyond. We are committed to leveraging our advanced technology to drive sustainable change across various sectors:
     </p>
     </div>
 
     <div class="text-img-container">
       <div class="text-section">
-        <h2>Power Generation</h2>
-        <p>Our SOFC technology provides a sustainable, high-efficiency alternative to fossil fuels. Ideal for residential, commercial, and industrial power generation, it reduces emissions and supports clean energy solutions for both off-grid and urban locations.
+        <h2 style="font-family: Arial, sans-serif;">Power Generation</h2>
+        <p style="font-family: Arial, sans-serif;">Our SOFC technology provides a sustainable, high-efficiency alternative to fossil fuels. Ideal for residential, commercial, and industrial power generation, it reduces emissions and supports clean energy solutions for both off-grid and urban locations.
     Because our SOFC technology is noise-free and air pollution-free, it can be used in densely-populated areas, where the by-product heat can also be used for space heating, hot water, or absorption chillers, bringing the full system efficiency above 90% for combined heat and power (CHP), or 60% for electricity alone.
     </p>
     </div>
@@ -140,8 +140,8 @@ They operate at high temperatures, using a solid ceramic electrolyte to transpor
 
     <div class="text-img-container">
     <div class="text-section">
-    <h2>Energy Storage</h2>
-    <p>Our advanced SOFCs can operate as Solid Oxide Electrolysis Cells (SOECs), seamlessly integrating into energy storage systems. This enables efficient storage of excess renewable energy for use during low generation periods, enhancing grid stability and reliability.
+    <h2 style="font-family: Arial, sans-serif;">Energy Storage</h2>
+    <p style="font-family: Arial, sans-serif;">Our advanced SOFCs can operate as Solid Oxide Electrolysis Cells (SOECs), seamlessly integrating into energy storage systems. This enables efficient storage of excess renewable energy for use during low generation periods, enhancing grid stability and reliability.
     </p>
     </div>
     <img src="@/assets/energy_storage.png" alt="truck" class="content-image">
@@ -149,8 +149,8 @@ They operate at high temperatures, using a solid ceramic electrolyte to transpor
 
   <div class="text-img-container">
     <div class="text-section">
-    <h2>Syngas & Hydrogen Production</h2>
-    <p>Our SOECs efficiently produce hydrogen and syngas frcom various fuel sources, including natural gas, biogas, and green methane. This technology supports the hydrogen economy and fosters innovations in clean fuel production and energy storage.
+    <h2 style="font-family: Arial, sans-serif;">Syngas & Hydrogen Production</h2>
+    <p style="font-family: Arial, sans-serif;">Our SOECs efficiently produce hydrogen and syngas frcom various fuel sources, including natural gas, biogas, and green methane. This technology supports the hydrogen economy and fosters innovations in clean fuel production and energy storage.
     </p>
     </div>
     <img src="@/assets/syngas_img.png" alt="truck" class="content-image">
@@ -397,6 +397,7 @@ p {
 .description-image {
   width: 100%;
   height: 100%;
+  margin-bottom: 30px;
 
 }
 
