@@ -110,8 +110,9 @@ export default {
 
 <style scoped>
 .contact-page {
-  padding: 0px;
-  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
 }
 
@@ -124,21 +125,32 @@ export default {
   text-align: left;
 }
 
-.contact-forms {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin-top: 30px;
-}
 
-.contact-form, .global-reach-form {
+.contact-form, 
+.global-reach-form {
   background: rgba(255, 255, 255, 0.9); /* White background with transparency */
   padding: 20px;
   border-radius: 10px;
-  max-width: 1000px;
-  width: 100%;
+  max-width: 1000px; /* 最大宽度 */
+  width: 100%; /* 在父容器内占满 */
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+  margin: 20px auto; /* 水平居中并加上顶部间距 */
+  box-sizing: border-box; /* 包括padding在内计算宽度 */
+}
+
+/* 添加对小屏幕的支持 */
+@media (max-width: 1200px) {
+  .contact-form, 
+  .global-reach-form {
+    max-width: 90%; /* 确保在小屏幕时有更好的边距 */
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-form, 
+  .global-reach-form {
+    padding: 15px; /* 减少内边距以适应更小屏幕 */
+  }
 }
 
 .form-row {
@@ -158,10 +170,11 @@ export default {
 }
 
 .form-group input, .form-group textarea, .form-group select {
-  width: 100%;
-  padding: 10px;
+  width: 100%; /* 确保input占满父容器 */
+  padding: 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 4px;
+  box-sizing: border-box; /* 确保padding不会影响宽度 */
 }
 
 button {

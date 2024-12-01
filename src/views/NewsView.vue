@@ -1,5 +1,5 @@
 <template>
-  <div class="company-page">    
+  <div class="news-page">    
     <BackgroundComponent
       backgroundImage="news_bg.png"
       title="NEWSROOM"
@@ -64,7 +64,7 @@ export default {
 
 <style scoped>
 
-.team-page {
+.news-page{
   display: flex;
   flex-direction: column;
   align-items: center;

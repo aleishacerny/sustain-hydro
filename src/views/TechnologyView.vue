@@ -11,7 +11,11 @@
     />
     
     <!-- Content section -->
-
+    <div class="content-container">
+      <div class="description-container">
+     <p style="font-family: Arial, sans-serif;">Leveraging decades of research and breakthroughs, Serenity Power is developing next-generation Solid Oxide Fuel Cell (SOFCs) solutions to power heavy-duty transportation with clean, efficient energy. </p>
+      </div>
+      </div>
 
     <!-- Grid section -->
     <div class="content-container">
@@ -24,7 +28,16 @@ They operate at high temperatures, using a solid ceramic electrolyte to transpor
       </div>
       </div>
 
+      <div class="content-container">
+      <div class="description-container">
      <h2 style="font-family: Arial, sans-serif;">How Are We Different?</h2>
+     <p style="font-family: Arial, sans-serif;">Our advanced SOFCs represent a significant leap forward compared to conventional technologies, unlocking new applications for SOFCs in transportation and portable power.</p>
+     <img src="@/assets/how_different_img.png" alt="truck" class="description-image">
+      </div>
+      </div>
+
+    
+     <h2 style="font-family: Arial, sans-serif;">Our Innovations That Set Us Apart:</h2>
      <div class="content-grid">
       <div class="grid-item" v-for="(item, index) in gridItems" :key="index">
         <div class="item-text">
@@ -221,9 +234,7 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
-  height: 100%;
 }
 
 
@@ -375,10 +386,12 @@ p {
 }
 
 .background-container {
-  width: 150vw;
+  width: 100%;
   height: 50vh;
   overflow: hidden;
   position: relative;
+  margin: 0; /* 确保没有外边距 */
+  padding: 0; /* 确保没有内边距 */
 }
 
 
@@ -386,9 +399,12 @@ p {
 .background-image {
   width: 100%;
   height: 100%;
+  object-fit: cover; /* 确保图像完全覆盖 */
   position: absolute;
   top: 0;
   left: 0;
+  margin: 0; /* 移除任何默认的边距 */
+  padding: 0; /* 移除任何默认的内边距 */
 }
 
 

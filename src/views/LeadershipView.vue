@@ -1,5 +1,5 @@
 <template>
-  <div class="team-page">
+  <div class="leadership-page">
     <BackgroundComponent backgroundImage="../leadership_bg.png" title="LEADERSHIP"
       text="Get to know the people that are making the energy transition happen!"
       titleColor="white" textColor="white" titleSize="3rem" textSize="1.5rem" />
@@ -93,7 +93,7 @@ export default {
 <style scoped>
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
-.team-page {
+.leadership-page {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -104,7 +104,7 @@ export default {
   display: grid;
   grid-template-columns: repeat(2, 1fr); /* 2卡片每行 */
   gap: 30px; /* 调整卡片间距 */
-  padding: 50px;
+  /* padding: 50px; */
   width: 100%;
   max-width: 900px; /* 限制宽度，避免卡片过大 */
   margin: 0 auto;
@@ -115,6 +115,7 @@ export default {
   perspective: 1000px;
   width: 100%; /* 设置卡片宽度为100%以适应网格 */
   max-width: 400px; /* 设置卡片最大宽度 */
+  margin-bottom: 50px;
   font-family: Arial, Helvetica, sans-serif;
   
 }

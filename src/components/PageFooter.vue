@@ -40,7 +40,6 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
 html, body {
-  
   margin: 0;
   padding: 0;
   width: 100%;
@@ -53,7 +52,7 @@ html, body {
   background-color: #005d7a;
   color: white;
   text-align: left;
-  width: 100vw;
+  width: 100%;
   margin: 0;
   padding: 0;
 }

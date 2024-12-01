@@ -1,6 +1,6 @@
 <!-- submit button  color; technology-alignment; logo bigger+link;  email address color; linkedin icon-->
 <template>
-  <div class="homepage">
+  <div class="home-page">
     <div class="background-container">
       <img src="@/assets/homepage_bg.png" alt="Background" class="background-image">
       <div class="content-overlay" style="white-space: nowrap;">
@@ -49,21 +49,20 @@ export default {
 /* Import League Spartan font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
 
-.homepage {
+.home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   width: 100%;
-  height: 100%;
+  max-width: 100vw; /* 防止超出页面宽度 */
+  overflow-x: hidden; /* 隐藏多余内容，防止水平滚动 */
 }
 
 .background-container {
   width: 100vw;
   height: 100vh;
   overflow: hidden;
-  top: 0;
-  left: 0;
+  position: relative;
 }
 
 .background-image {
@@ -93,7 +92,7 @@ export default {
 .subtitle-text {
   color: white;
   font-size: 2rem;
-  font-family:sans-serif; /* Replace with a similar sans-serif */
+  font-family: sans-serif; /* Replace with a similar sans-serif */
 }
 
 .cta-button {
@@ -141,13 +140,15 @@ export default {
 .main-content {
   padding: 20px;
   width: 100%;
+  max-width: 1000px; /* 限制主内容宽度 */
+  margin: 0 auto; /* 确保内容居中 */
 }
 
 .text-section {
   padding: 20px;
   border-radius: 10px;
-  max-width: 1000px;
-  margin: 0 auto;
+  max-width: 1000px; /* 确保文本区域不会超过页面宽度 */
+  margin: 0 auto; /* 居中布局 */
   font-family: Arial, sans-serif;
   color: #333;
 }
@@ -161,5 +162,12 @@ export default {
   font-size: 18px;
   line-height: 1.6;
   margin: 10px 0;
+}
+
+/* 防止所有内容超出页面宽度 */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 </style>
