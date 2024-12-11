@@ -2,7 +2,9 @@
   <header :class="{'scrolled': isScrolled}" class="header">
     <div class="container">
       <div class="logo">
-        <img src="@/assets/White.png" alt="Sustain Hydro Logo" />
+        <router-link to="/" @click="closeMenu">
+      <img src="@/assets/White.png" alt="Sustain Hydro Logo" class="logo" />
+    </router-link>
       </div>
       <div class="nav-search-container">
         <nav class="navigation">
@@ -14,14 +16,14 @@
           <ul :class="{'open': isMenuOpen}">
             <li><router-link to="/" @click="closeMenu">Home</router-link></li>
             <li><router-link to="/technology" @click="closeMenu">Technology</router-link></li>
-            <li><router-link to="/news" @click="closeMenu">News</router-link></li>
             <li class="dropdown">
               <router-link to="/about-us/company" @click="closeMenu">About Us</router-link>
               <ul class="dropdown-menu">
                 <li><router-link to="/about-us/company" @click="closeMenu">Company</router-link></li>
-                <li><router-link to="/about-us/leadership" @click="closeMenu">Leadership</router-link></li>
+                <li><router-link to="/about-us/leadership" @click="closeMenu">Team</router-link></li>
               </ul>
             </li>
+            <li><router-link to="/news" @click="closeMenu">News</router-link></li>
             <li><router-link to="/contact-us" @click="closeMenu">Contact Us</router-link></li>
           </ul>
         </nav>
@@ -107,7 +109,7 @@ export default {
 }
 
 .logo img {
-  height: 80px;
+  height: 100px;
 }
 
 .nav-search-container {

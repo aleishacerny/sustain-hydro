@@ -8,6 +8,9 @@
       textColor="white"
       titleSize="3rem"
       textSize="1.5rem"
+      titleFontFamily="League Spartan"
+      subtitleFontFamily="system-ui"
+      
     />
     
     <!-- Content section -->

@@ -8,7 +8,8 @@
       textColor="white"
       titleSize="3rem"
       textSize="1.5rem"
-      titleFontFamily="League Spartan"
+       titleFontFamily="League Spartan"
+      subtitleFontFamily="system-ui"
     />
 
 
@@ -27,7 +28,7 @@
    
 
     <div class="values-section">
-      <h2 style="font-family: Arial, sans-serif;">Our Core Values</h2>
+      <h1 style="font-family: Arial, sans-serif;">Our Core Values</h1>
       <div class="values-cards">
         <div class="value-card">
           <img src="@/assets/Innovation.png" alt="Impact Icon" class="value-icon" />

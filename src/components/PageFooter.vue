@@ -15,7 +15,7 @@
           <h3 style="font-family: Arial, sans-serif;">Follow us</h3>
           <p style="font-family: Arial, sans-serif;">Stay updated with our latest news and developments by following us on LinkedIn.          </p>
           <div class="social-icons">
-            <a href="https://www.linkedin.com/company/serenity-power-ca/"><img src="@/assets/linkedin.png" alt="linkedin" class="icon"></a>
+            <a href=" https://www.linkedin.com/company/serenity-power-ca/"><img src="@/assets/linkedin.png" alt="linkedin" class="icon"></a>
           </div>
         </div>
       </div>

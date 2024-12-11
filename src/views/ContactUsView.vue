@@ -8,6 +8,8 @@
       textColor="white"
       titleSize="3rem"
       textSize="1.5rem"
+      titleFontFamily="League Spartan"
+      subtitleFontFamily="system-ui"
     />
       <form class="global-reach-form" @submit.prevent="submitForm">
         <h2>Global Reach</h2>
@@ -109,22 +111,15 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap');
+
 .contact-page {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
+  font-family: Arial, sans-serif;
 }
-
-.contact-header {
-  background-image: url('@/assets/background.jpg'); /* Replace with your background image path */
-  background-size: cover;
-  background-position: center;
-  padding: 50px;
-  color: #fff;
-  text-align: left;
-}
-
 
 .contact-form, 
 .global-reach-form {
@@ -136,6 +131,7 @@ export default {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   margin: 20px auto; /* 水平居中并加上顶部间距 */
   box-sizing: border-box; /* 包括padding在内计算宽度 */
+  font-family: Arial, sans-serif;
 }
 
 /* 添加对小屏幕的支持 */

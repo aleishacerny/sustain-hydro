@@ -6,7 +6,7 @@
       <div class="content-overlay" style="white-space: nowrap;">
         <h1 class="title-text">DRIVING CLEAN</h1>
         <h1 class="title-text">ENERGY SOLUTIONS</h1>
-        <p class="subtitle-text">with Advanced Solid Oxide Fuel Cells</p>
+        <p class="subtitle-text" style="font-family:system-ui">with Advanced Solid Oxide Fuel Cells</p>
         
         <!-- Learn More Button -->
         <button class="cta-button" @click="goToOurCompany">Learn More</button>
@@ -85,13 +85,13 @@ export default {
 
 .title-text {
   color: white;
-  font-size: 4rem; /* Adjust to your needs */
+  font-size: 5rem; /* Adjust to your needs */
   font-family: 'League Spartan', sans-serif;
 }
 
 .subtitle-text {
   color: white;
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-family: sans-serif; /* Replace with a similar sans-serif */
 }
 

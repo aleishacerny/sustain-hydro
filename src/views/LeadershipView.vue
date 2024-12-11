@@ -2,10 +2,10 @@
   <div class="leadership-page">
     <BackgroundComponent backgroundImage="../leadership_bg.png" title="LEADERSHIP"
       text="Get to know the people that are making the energy transition happen!"
-      titleColor="white" textColor="white" titleSize="3rem" textSize="1.5rem" />
-      <div class="description-container">
-      <h2>At Serenity Power, our leadership team brings together a wealth of experience and expertise in fuel cell technology, engineering, and sustainable energy solutions.</h2>
-      </div>
+      titleColor="white" textColor="white" titleSize="3rem" textSize="1.5rem" 
+      titleFontFamily="League Spartan"
+      subtitleFontFamily="system-ui"/>
+
 
     <div class="team-container">
       <div class="team-card" v-for="member in teamMembers" :key="member.id">
@@ -61,19 +61,19 @@ export default {
         {
           id: 3,
           name: 'Dr. Olivera Kesler',
-          position: 'Chief Technology Officer',
+          position: 'Chief Science Officer',
           photo: 'Olivera Kesler.jpg',
           linkedin: 'https://www.linkedin.com/in/olivera-kesler-566797281/',
-          bio: 'Dr. Olivera Kesler is the CTO of Serenity Power, bringing over 25 years of expertise in Solid Oxide Fuel Cell technology. As a Professor at the University of Toronto and an MIT alumna, she leads our R&D efforts, ensuring our SOFCs remain at the cutting edge of innovation.',
+          bio: ' Dr. Olivera Kesler is the CSO of Serenity Power, bringing over 25 years of expertise in Solid Oxide Fuel Cell technology. As a Professor at the University of Toronto and an MIT alumna, she leads our R&D efforts, ensuring our SOFCs remain at the cutting edge of innovation.',
           isFlipped: false
         },
         {
           id: 4,
           name: 'Yifei Yan',
-          position: 'Director of Engineering',
+          position: 'Chief Technology Officer',
           photo: 'Yifei Yan.jpg',
           linkedin: 'https://www.linkedin.com/in/yifei-yan-57b137134/',
-          bio: 'Yifei is a last year PhD student working at the University of Toronto under supervision of Dr. Kesler. The project focus on making high performance metal substrate for SOFC, which has been the performance bottleneck for SOFCs from the lab.',
+          bio: 'Yifei holds a PhD from the Mechanical Engineering department at the University of Toronto, where his research focused on advancing high-performance metal substrates for SOFCs. By addressing a key performance bottleneck in SOFC technology, he contributed significantly to improving their overall efficiency and durability.',
           isFlipped: false
         }
       ]

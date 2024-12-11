@@ -8,7 +8,8 @@
       textColor="white"
       titleSize="3rem"
       textSize="1.5rem"
-      titleFontFamily="League Spartan"
+       titleFontFamily="League Spartan"
+      subtitleFontFamily="system-ui"
     />
     <div class="cards-section">
       <div class="card" v-for="(card, index) in cards" :key="index" @click="goToPage(card.link)">
@@ -35,19 +36,19 @@ export default {
       cards: [
         {
           title: 'Exciting updates are on the way!',
-          date: 'July 12, 2024',
+          date: 'January 1, 2025',
           image: require('@/assets/news1.jpg'), // Replace with actual path
           link: '/news/saving-lives'
         },
         {
           title: 'Exciting updates are on the way!',
-          date: 'April 22, 2024',
+          date: 'January 1, 2025',
           image: require('@/assets/news2.jpg'), // Replace with actual path
           link: '/news/hypilot'
         },
         {
           title: 'Exciting updates are on the way!',
-          date: 'December 24, 2023',
+          date: 'January 1, 2025',
           image: require('@/assets/news3.jpg'), // Replace with actual path
           link: '/news/year-in-review'
         }
