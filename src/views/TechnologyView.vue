@@ -95,6 +95,8 @@ They operate at high temperatures, using a solid ceramic electrolyte to transpor
       </div>
     </div>
 
+    <img src="@/assets/benefits.png" alt="truck" class="description-image">
+    
     <h2 style="font-family: Arial, sans-serif;">Benefits of Serenity Power Technology</h2>
     <div class="content-container">
     <div class="description-container">
@@ -125,7 +127,7 @@ They operate at high temperatures, using a solid ceramic electrolyte to transpor
     </div>
 
   
-     <img src="@/assets/benefits.png" alt="truck" class="description-image">
+    
      
 
    
