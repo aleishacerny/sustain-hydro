@@ -1,12 +1,12 @@
 <template>
   <div class="technologyPage">
     <BackgroundComponent
-      backgroundImage="tech_bg.jpg"
+      backgroundImage="Technology.png"
       title="TECHNOLOGY"
       text="Learn about Serenity Power’s innovative Solid Oxide Fuel Cell technology. "
       titleColor="white"
       textColor="white"
-      titleSize="3rem"
+      titleSize="3.5rem"
       textSize="1.5rem"
       titleFontFamily="League Spartan"
       subtitleFontFamily="system-ui"
