@@ -255,7 +255,7 @@ h1 {
 
 h2 {
   font-size: 2rem; /* Adjust font size as needed */
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 p {
