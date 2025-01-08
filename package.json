@@ -1,1 +1,14 @@
-{}
+{
+    "name": "sustain-hydro",
+    "version": "1.0.0",
+    "scripts": {
+        "serve": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "test": "vue-cli-service test"
+    },
+    "dependencies": {
+        "@vue/cli-service": "^5.0.0",
+        "vue": "^3.5.13",
+        "vue-router": "^4.5.0"
+    }
+}
