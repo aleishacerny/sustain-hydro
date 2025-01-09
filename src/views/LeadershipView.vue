@@ -1,6 +1,6 @@
 <template>
   <div class="leadership-page">
-    <BackgroundComponent backgroundImage="../leadership_bg.png" title="LEADERSHIP"
+    <BackgroundComponent backgroundImage="../leadership_bg.png" title="TEAM"
       text="Get to know the people that are making the energy transition happen!"
       titleColor="white" textColor="white" titleSize="3rem" textSize="1.5rem" 
       titleFontFamily="League Spartan"
